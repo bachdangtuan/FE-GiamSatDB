@@ -27,13 +27,13 @@ export class LoginComponent implements OnInit {
     private fb: FormBuilder,
     private titleService: Title
   ) {
-    titleService.setTitle("Log In | Shreyu - Responsive Angular and Bootstrap 5 Admin Dashboard Template")
+    titleService.setTitle("Đăng nhập | ISofH - Theo dõi backup database")
   }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
-      email: ['shreyu@coderthemes.com', [Validators.required, Validators.email]],
-      password: ['test', Validators.required]
+      email: ['support.system@isofh.com', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
 
     // reset login status

@@ -20,7 +20,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             // authenticate - public
             if (request.url.endsWith('/api/login') && request.method === 'POST') {
                 const user = users.find(x => x.email === request.body.email && x.password === request.body.password);
-                if (!user) { return error('Email or password is incorrect'); }
+                if (!user) { return error('Email hoặc mật khẩu không đúng'); }
                 return ok({
                     ...user,
                     name: user.firstName + ' ' + user.lastName,

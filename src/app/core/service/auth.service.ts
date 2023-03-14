@@ -1,16 +1,16 @@
-import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {map} from 'rxjs/operators';
 
-import { User } from '../models/auth.models';
-import { loggedInUser } from '../helpers/utils';
+import {User} from '../models/auth.models';
+import {loggedInUser} from '../helpers/utils';
 
 
-@Injectable({ providedIn: 'root' })
+@Injectable({providedIn: 'root'})
 export class AuthenticationService {
     user: User | null = null;
 
-    constructor (private http: HttpClient) {
+    constructor(private http: HttpClient) {
     }
 
     /**
@@ -30,8 +30,10 @@ export class AuthenticationService {
      */
     login(email: string, password: string): any {
 
-        return this.http.post<any>(`/api/login`, { email, password })
+        return this.http.post<any>(`/api/login`, {email, password})
             .pipe(map(user => {
+
+                console.log('user', user)
                 // login successful if there's a jwt token in the response
                 if (user && user.token) {
                     this.user = user;
@@ -49,11 +51,10 @@ export class AuthenticationService {
      * @param password password of user
      */
     signup(name: string, email: string, password: string): any {
-        return this.http.post<any>(`/api/signup`, { name, email, password })
+        return this.http.post<any>(`/api/signup`, {name, email, password})
             .pipe(map(user => user));
 
     }
-
 
 
     /**
