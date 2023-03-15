@@ -220,11 +220,11 @@ export class TopbarComponent implements OnInit {
         icon: 'user',
         redirectTo: '/pages/profile',
       },
-      {
-        label: 'Lock Screen',
-        icon: 'lock',
-        redirectTo: '/auth/lock-screen',
-      },
+      // {
+      //   label: 'Lock Screen',
+      //   icon: 'lock',
+      //   redirectTo: '/auth/lock-screen',
+      // },
       {
         label: 'Logout',
         icon: 'log-out',

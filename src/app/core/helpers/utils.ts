@@ -7,7 +7,7 @@ function getAllUsers(): User[] {
     // array in session storage for registered users
     let users: User[] = JSON.parse(sessionStorage.getItem('users')!) || [
         {
-            id: 1, username: 'isofh', email: 'support.system@isofh.com', password: 'abcd@1234', firstName: 'Nik', lastName: 'Patel',
+            id: 1, username: 'isofh', email: 'support.system@isofh.com', password: 'abcd@1234', firstName: 'System', lastName: 'Administrator',
             avatar: 'assets/images/users/avatar-1.jpg', location: 'California, USA', title: 'User Experience Specialist'
         }
     ];
