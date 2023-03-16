@@ -26,29 +26,61 @@ const MENU_ITEMS: MenuItem[] = [
     //     ],
     // },
 
-    { key: 'dashboard', label: 'Nội bộ ISofH', isTitle: true },
+    { key: 'noi-bo', label: 'Nội bộ ISofH', isTitle: true },
     {
-        key: 'dashboard',
+        key: 'noi-bo',
         label: 'Máy chủ nội bộ',
         isTitle: false,
         icon: 'home',
         collapsed: true,
-        // badge: { variant: 'success', text: '02' },
         children: [
             {
-                key: 'ds-ecommerce',
-                label: 'Database Jira',
-                link: '/dashboard/ecommerce',
-                parentKey: 'dashboard',
+                key: 'sys-team',
+                label: 'Systems Team ISofH',
+                link: '/noi-bo/systems-team',
+                parentKey: 'noi-bo',
             },
             {
-                key: 'ds-analytics',
+                key: 'jira-company',
+                label: 'Database Jira',
+                link: '/noi-bo/jira-company',
+                parentKey: 'noi-bo',
+            },
+            {
+                key: 'jira-confluence',
                 label: 'Database Confluence',
-                link: '/dashboard/analytics',
-                parentKey: 'dashboard',
-            }
+                link: '/noi-bo/jira-confluence',
+                parentKey: 'noi-bo',
+            },
         ],
     },
+
+
+
+
+    // { key: 'dashboard', label: 'Nội bộ ISofH', isTitle: true },
+    // {
+    //     key: 'dashboard',
+    //     label: 'Máy chủ nội bộ',
+    //     isTitle: false,
+    //     icon: 'home',
+    //     collapsed: true,
+    //     // badge: { variant: 'success', text: '02' },
+    //     children: [
+    //         {
+    //             key: 'ds-ecommerce',
+    //             label: 'Database Jira',
+    //             link: '/dashboard/ecommerce',
+    //             parentKey: 'dashboard',
+    //         },
+    //         {
+    //             key: 'ds-analytics',
+    //             label: 'Database Confluence',
+    //             link: '/dashboard/analytics',
+    //             parentKey: 'dashboard',
+    //         }
+    //     ],
+    // },
 
     {key: 'apps', label: 'Danh sách bệnh viện', isTitle: true},
     {
