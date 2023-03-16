@@ -1,4 +1,4 @@
-import { MenuItem } from '../models/menu.model';
+import {MenuItem} from '../models/menu.model';
 
 // menu items for vertcal and detached layout
 const MENU_ITEMS: MenuItem[] = [
@@ -26,7 +26,7 @@ const MENU_ITEMS: MenuItem[] = [
     //     ],
     // },
 
-    { key: 'noi-bo', label: 'Nội bộ ISofH', isTitle: true },
+    {key: 'noi-bo', label: 'Nội bộ ISofH', isTitle: true},
     {
         key: 'noi-bo',
         label: 'Máy chủ nội bộ',
@@ -54,10 +54,166 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
-
-
-
-
+    {key: 'benh-vien', label: 'Danh sách bệnh viện', isTitle: true},
+    {
+        key: 'bv-y',
+        label: 'Bệnh viện Đại học Y',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            // {
+            //     key: 'benh-vien-y',
+            //     label: 'Inbox',
+            //     link: '/apps/email/inbox',
+            //     parentKey: 'benh-vien',
+            // },
+        ],
+    },
+    {
+        key: 'bv-dkth',
+        label: 'BV ĐK Thanh Hóa',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-phoi',
+        label: 'BV Phổi TW',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-psta',
+        label: 'BV Phụ sản TA',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-qyq110',
+        label: 'BV Quân Y 110',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-xanhpon',
+        label: 'BV Xanh Phôn',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-e',
+        label: 'Bệnh viện E',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-tttm',
+        label: 'TT Tim Mạch (viện E)',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-medi',
+        label: 'Bệnh viện Mediplus',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-ykhn',
+        label: 'BV Y Khoa HN',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-bm',
+        label: 'BV Bạch Mai',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-ytcc',
+        label: 'Y Tế Công Cộng',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-rehab',
+        label: 'Y Tế My Rehab',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-vietmy',
+        label: 'BV Việt Mỹ',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-dt',
+        label: 'BV Đồng Tâm',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-allen',
+        label: 'Y Tế Dr.Allen',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-vnhsc',
+        label: 'Y Tế VNHSC',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-ytcc',
+        label: 'Y Tế Công Cộng',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
+    {
+        key: 'bv-ytcc',
+        label: 'Y Tế Công Cộng',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [],
+    },
     // { key: 'dashboard', label: 'Nội bộ ISofH', isTitle: true },
     // {
     //     key: 'dashboard',
@@ -82,22 +238,6 @@ const MENU_ITEMS: MenuItem[] = [
     //     ],
     // },
 
-    {key: 'apps', label: 'Danh sách bệnh viện', isTitle: true},
-    {
-        key: 'apps-email',
-        label: 'Bệnh viện Bạch mai',
-        isTitle: false,
-        icon: 'mail',
-        collapsed: true,
-        children: [
-            {
-                key: 'email-inbox',
-                label: 'Inbox',
-                link: '/apps/email/inbox',
-                parentKey: 'apps-email',
-            },
-        ],
-    },
     // { key: 'apps', label: 'Danh sách bệnh viện', isTitle: true },
     // {
     //     key: 'apps-calendar',
@@ -364,7 +504,7 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'apps',
                 collapsed: true,
                 children: [
-                    { key: 'project-list', label: 'List', link: '/apps/projects/list', parentKey: 'apps-projects' },
+                    {key: 'project-list', label: 'List', link: '/apps/projects/list', parentKey: 'apps-projects'},
                     {
                         key: 'project-details',
                         label: 'Detail',
@@ -381,8 +521,8 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'apps',
                 collapsed: true,
                 children: [
-                    { key: 'task-list', label: 'List', link: '/apps/tasks/list', parentKey: 'apps-tasks' },
-                    { key: 'task-kanban', label: 'Kanban Board', link: '/apps/tasks/kanban', parentKey: 'apps-tasks' },
+                    {key: 'task-list', label: 'List', link: '/apps/tasks/list', parentKey: 'apps-tasks'},
+                    {key: 'task-kanban', label: 'Kanban Board', link: '/apps/tasks/kanban', parentKey: 'apps-tasks'},
                 ],
             },
             {
@@ -401,11 +541,11 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
         label: 'Pages',
         isTitle: true,
         children: [
-            { key: 'page-starter', label: 'Starter', link: '/pages/starter', parentKey: 'extra-pages' },
-            { key: 'page-profile', label: 'Profile', link: '/pages/profile', parentKey: 'extra-pages' },
-            { key: 'page-activity', label: 'Activity', link: '/pages/activity', parentKey: 'extra-pages' },
-            { key: 'page-invoice', label: 'Invoice', link: '/pages/invoice', parentKey: 'extra-pages' },
-            { key: 'page-pricing', label: 'Pricing', link: '/pages/pricing', parentKey: 'extra-pages' },
+            {key: 'page-starter', label: 'Starter', link: '/pages/starter', parentKey: 'extra-pages'},
+            {key: 'page-profile', label: 'Profile', link: '/pages/profile', parentKey: 'extra-pages'},
+            {key: 'page-activity', label: 'Activity', link: '/pages/activity', parentKey: 'extra-pages'},
+            {key: 'page-invoice', label: 'Invoice', link: '/pages/invoice', parentKey: 'extra-pages'},
+            {key: 'page-pricing', label: 'Pricing', link: '/pages/pricing', parentKey: 'extra-pages'},
             {
                 key: 'page-maintenance',
                 label: 'Maintenance',
@@ -413,8 +553,8 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 link: '/maintenance',
                 parentKey: 'extra-pages',
             },
-            { key: 'page-error-404', label: 'Error - 404', link: '/error-404', parentKey: 'extra-pages' },
-            { key: 'page-error-500', label: 'Error - 500', link: '/error-500', parentKey: 'extra-pages' },
+            {key: 'page-error-404', label: 'Error - 404', link: '/error-404', parentKey: 'extra-pages'},
+            {key: 'page-error-500', label: 'Error - 500', link: '/error-500', parentKey: 'extra-pages'},
         ],
     },
     {
@@ -423,7 +563,14 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
         label: 'Components',
         isTitle: true,
         children: [
-            { key: 'ui-elements', label: 'UI Elements', isTitle: false, icon: 'package', link: '/ui-element', parentKey: 'components' },
+            {
+                key: 'ui-elements',
+                label: 'UI Elements',
+                isTitle: false,
+                icon: 'package',
+                link: '/ui-element',
+                parentKey: 'components'
+            },
             {
                 key: 'icons',
                 label: 'Icons',
@@ -432,12 +579,19 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'icon-unicons', label: 'Unicons', link: '/icons/unicon', parentKey: 'icons' },
-                    { key: 'icon-feather', label: 'Feather', link: '/icons/feather', parentKey: 'icons' },
-                    { key: 'icon-bootstrap', label: 'Bootstrap', link: '/icons/bootstrap', parentKey: 'icons' },
+                    {key: 'icon-unicons', label: 'Unicons', link: '/icons/unicon', parentKey: 'icons'},
+                    {key: 'icon-feather', label: 'Feather', link: '/icons/feather', parentKey: 'icons'},
+                    {key: 'icon-bootstrap', label: 'Bootstrap', link: '/icons/bootstrap', parentKey: 'icons'},
                 ],
             },
-            { key: 'charts', label: 'Charts', isTitle: false, icon: 'bar-chart-2', link: '/charts', parentKey: 'components' },
+            {
+                key: 'charts',
+                label: 'Charts',
+                isTitle: false,
+                icon: 'bar-chart-2',
+                link: '/charts',
+                parentKey: 'components'
+            },
             {
                 key: 'forms',
                 label: 'Forms',
@@ -446,12 +600,12 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'form-basic', label: 'Basic Elements', link: '/forms/basic', parentKey: 'forms' },
-                    { key: 'form-advanced', label: 'Advanced', link: '/forms/advanced', parentKey: 'forms' },
-                    { key: 'form-validation', label: 'Validation', link: '/forms/validation', parentKey: 'forms' },
-                    { key: 'form-wizard', label: 'Wizard', link: '/forms/wizard', parentKey: 'forms' },
-                    { key: 'form-editors', label: 'Editors', link: '/forms/editors', parentKey: 'forms' },
-                    { key: 'form-upload', label: 'File Uploads', link: '/forms/upload', parentKey: 'forms' }
+                    {key: 'form-basic', label: 'Basic Elements', link: '/forms/basic', parentKey: 'forms'},
+                    {key: 'form-advanced', label: 'Advanced', link: '/forms/advanced', parentKey: 'forms'},
+                    {key: 'form-validation', label: 'Validation', link: '/forms/validation', parentKey: 'forms'},
+                    {key: 'form-wizard', label: 'Wizard', link: '/forms/wizard', parentKey: 'forms'},
+                    {key: 'form-editors', label: 'Editors', link: '/forms/editors', parentKey: 'forms'},
+                    {key: 'form-upload', label: 'File Uploads', link: '/forms/upload', parentKey: 'forms'}
                 ],
             },
             {
@@ -462,8 +616,8 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'table-basic', label: 'Basic', link: '/tables/basic', parentKey: 'tables' },
-                    { key: 'table-advanced', label: 'Advanced Tables', link: '/tables/advanced', parentKey: 'tables' },
+                    {key: 'table-basic', label: 'Basic', link: '/tables/basic', parentKey: 'tables'},
+                    {key: 'table-advanced', label: 'Advanced Tables', link: '/tables/advanced', parentKey: 'tables'},
                 ],
             },
             {
@@ -474,8 +628,8 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'maps-googlemaps', label: 'Google Maps', link: '/maps/googlemaps', parentKey: 'maps' },
-                    { key: 'maps-vectormaps', label: 'Vector Maps', link: '/maps/vectormaps', parentKey: 'maps' },
+                    {key: 'maps-googlemaps', label: 'Google Maps', link: '/maps/googlemaps', parentKey: 'maps'},
+                    {key: 'maps-vectormaps', label: 'Vector Maps', link: '/maps/vectormaps', parentKey: 'maps'},
                 ],
             },
             {
@@ -514,15 +668,15 @@ const TWO_COl_MENU_ITEMS: MenuItem[] = [
                                     },
                                 ],
                             },
-                            { key: 'menu-levels-2-2', label: 'Level 2.2', link: '/', parentKey: 'menu-levels-1-1' },
+                            {key: 'menu-levels-2-2', label: 'Level 2.2', link: '/', parentKey: 'menu-levels-1-1'},
                         ],
                     },
-                    { key: 'menu-levels-1-2', label: 'Level 1.2', link: '/', parentKey: 'menu-levels' },
+                    {key: 'menu-levels-1-2', label: 'Level 1.2', link: '/', parentKey: 'menu-levels'},
                 ],
             },
         ],
     },
-    { key: 'widgets', label: 'Widgets', isTitle: false, icon: 'gift', link: '/widgets' },
+    {key: 'widgets', label: 'Widgets', isTitle: false, icon: 'gift', link: '/widgets'},
 ];
 
 // menu items for horizontal layout
@@ -607,7 +761,7 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'apps',
                 collapsed: true,
                 children: [
-                    { key: 'project-list', label: 'List', link: '/apps/projects/list', parentKey: 'apps-projects' },
+                    {key: 'project-list', label: 'List', link: '/apps/projects/list', parentKey: 'apps-projects'},
                     {
                         key: 'project-details',
                         label: 'Detail',
@@ -624,8 +778,8 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'apps',
                 collapsed: true,
                 children: [
-                    { key: 'task-list', label: 'List', link: '/apps/tasks/list', parentKey: 'apps-tasks' },
-                    { key: 'task-kanban', label: 'Kanban Board', link: '/apps/tasks/kanban', parentKey: 'apps-tasks' },
+                    {key: 'task-list', label: 'List', link: '/apps/tasks/list', parentKey: 'apps-tasks'},
+                    {key: 'task-kanban', label: 'Kanban Board', link: '/apps/tasks/kanban', parentKey: 'apps-tasks'},
                 ],
             },
             {
@@ -645,8 +799,15 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
         isTitle: true,
         collapsed: true,
         children: [
-            { key: 'ui-elements', label: 'UI Elements', isTitle: false, icon: 'package', link: '/ui-element', parentKey: 'components' },
-            { key: 'widgets', label: 'Widgets', isTitle: false, icon: 'gift', link: '/widgets', parentKey: 'components' },
+            {
+                key: 'ui-elements',
+                label: 'UI Elements',
+                isTitle: false,
+                icon: 'package',
+                link: '/ui-element',
+                parentKey: 'components'
+            },
+            {key: 'widgets', label: 'Widgets', isTitle: false, icon: 'gift', link: '/widgets', parentKey: 'components'},
 
             {
                 key: 'forms',
@@ -656,15 +817,22 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'form-basic', label: 'Basic Elements', link: '/forms/basic', parentKey: 'forms' },
-                    { key: 'form-advanced', label: 'Advanced', link: '/forms/advanced', parentKey: 'forms' },
-                    { key: 'form-validation', label: 'Validation', link: '/forms/validation', parentKey: 'forms' },
-                    { key: 'form-wizard', label: 'Wizard', link: '/forms/wizard', parentKey: 'forms' },
-                    { key: 'form-editors', label: 'Editors', link: '/forms/editors', parentKey: 'forms' },
-                    { key: 'form-upload', label: 'File Uploads', link: '/forms/upload', parentKey: 'forms' }
+                    {key: 'form-basic', label: 'Basic Elements', link: '/forms/basic', parentKey: 'forms'},
+                    {key: 'form-advanced', label: 'Advanced', link: '/forms/advanced', parentKey: 'forms'},
+                    {key: 'form-validation', label: 'Validation', link: '/forms/validation', parentKey: 'forms'},
+                    {key: 'form-wizard', label: 'Wizard', link: '/forms/wizard', parentKey: 'forms'},
+                    {key: 'form-editors', label: 'Editors', link: '/forms/editors', parentKey: 'forms'},
+                    {key: 'form-upload', label: 'File Uploads', link: '/forms/upload', parentKey: 'forms'}
                 ],
             },
-            { key: 'charts', label: 'Charts', isTitle: false, icon: 'bar-chart-2', link: '/charts', parentKey: 'components' },
+            {
+                key: 'charts',
+                label: 'Charts',
+                isTitle: false,
+                icon: 'bar-chart-2',
+                link: '/charts',
+                parentKey: 'components'
+            },
             {
                 key: 'tables',
                 label: 'Tables',
@@ -673,8 +841,8 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'table-basic', label: 'Basic', link: '/tables/basic', parentKey: 'tables' },
-                    { key: 'table-advanced', label: 'Advanced Tables', link: '/tables/advanced', parentKey: 'tables' },
+                    {key: 'table-basic', label: 'Basic', link: '/tables/basic', parentKey: 'tables'},
+                    {key: 'table-advanced', label: 'Advanced Tables', link: '/tables/advanced', parentKey: 'tables'},
                 ],
             },
             {
@@ -685,9 +853,9 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'icon-unicons', label: 'Unicons', link: '/icons/unicon', parentKey: 'icons' },
-                    { key: 'icon-feather', label: 'Feather', link: '/icons/feather', parentKey: 'icons' },
-                    { key: 'icon-bootstrap', label: 'Bootstrap', link: '/icons/bootstrap', parentKey: 'icons' },
+                    {key: 'icon-unicons', label: 'Unicons', link: '/icons/unicon', parentKey: 'icons'},
+                    {key: 'icon-feather', label: 'Feather', link: '/icons/feather', parentKey: 'icons'},
+                    {key: 'icon-bootstrap', label: 'Bootstrap', link: '/icons/bootstrap', parentKey: 'icons'},
                 ],
             },
             {
@@ -698,8 +866,8 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 parentKey: 'components',
                 collapsed: true,
                 children: [
-                    { key: 'maps-googlemaps', label: 'Google Maps', link: '/maps/googlemaps', parentKey: 'maps' },
-                    { key: 'maps-vectormaps', label: 'Vector Maps', link: '/maps/vectormaps', parentKey: 'maps' },
+                    {key: 'maps-googlemaps', label: 'Google Maps', link: '/maps/googlemaps', parentKey: 'maps'},
+                    {key: 'maps-vectormaps', label: 'Vector Maps', link: '/maps/vectormaps', parentKey: 'maps'},
                 ],
             },
         ],
@@ -711,11 +879,17 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
         icon: 'file-text',
         collapsed: true,
         children: [
-            { key: 'page-starter', label: 'Starter', isTitle: false, link: '/pages/starter', parentKey: 'extra-pages' },
-            { key: 'page-profile', label: 'Profile', isTitle: false, link: '/pages/profile', parentKey: 'extra-pages' },
-            { key: 'page-activity', label: 'Activity', isTitle: false, link: '/pages/activity', parentKey: 'extra-pages' },
-            { key: 'page-invoice', label: 'Invoice', isTitle: false, link: '/pages/invoice', parentKey: 'extra-pages' },
-            { key: 'page-pricing', label: 'Pricing', isTitle: false, link: '/pages/pricing', parentKey: 'extra-pages' },
+            {key: 'page-starter', label: 'Starter', isTitle: false, link: '/pages/starter', parentKey: 'extra-pages'},
+            {key: 'page-profile', label: 'Profile', isTitle: false, link: '/pages/profile', parentKey: 'extra-pages'},
+            {
+                key: 'page-activity',
+                label: 'Activity',
+                isTitle: false,
+                link: '/pages/activity',
+                parentKey: 'extra-pages'
+            },
+            {key: 'page-invoice', label: 'Invoice', isTitle: false, link: '/pages/invoice', parentKey: 'extra-pages'},
+            {key: 'page-pricing', label: 'Pricing', isTitle: false, link: '/pages/pricing', parentKey: 'extra-pages'},
             {
                 key: 'page-maintenance',
                 label: 'Maintenance',
@@ -723,11 +897,11 @@ const HORIZONTAL_MENU_ITEMS: MenuItem[] = [
                 link: '/maintenance',
                 parentKey: 'extra-pages',
             },
-            { key: 'page-error-404', label: 'Error - 404', isTitle: false, link: '/error-404', parentKey: 'extra-pages' },
-            { key: 'page-error-500', label: 'Error - 500', isTitle: false, link: '/error-500', parentKey: 'extra-pages' },
+            {key: 'page-error-404', label: 'Error - 404', isTitle: false, link: '/error-404', parentKey: 'extra-pages'},
+            {key: 'page-error-500', label: 'Error - 500', isTitle: false, link: '/error-500', parentKey: 'extra-pages'},
         ],
     }
 
 ];
 
-export { MENU_ITEMS, TWO_COl_MENU_ITEMS, HORIZONTAL_MENU_ITEMS };
+export {MENU_ITEMS, TWO_COl_MENU_ITEMS, HORIZONTAL_MENU_ITEMS};

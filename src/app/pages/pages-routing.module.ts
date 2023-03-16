@@ -12,6 +12,10 @@ const routes: Routes = [
         path: 'noi-bo',
         loadChildren: () => import('./noi-bo/noi-bo.module').then(m => m.NoiBoModule)
     },
+    {
+        path: 'benh-vien',
+        loadChildren: () => import('./nhom-benh-vien/nhom-benh-vien.module').then(m => m.NhomBenhVienModule)
+    },
 
     // {
     //     path: '',

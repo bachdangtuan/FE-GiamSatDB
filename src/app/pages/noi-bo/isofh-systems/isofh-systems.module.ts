@@ -1,8 +1,8 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {JiraCompanyRoutingModule} from "../jira-company/jira-company-routing.module";
 import {IsofhSystemsComponent} from "./isofh-systems.component";
+import {IsofhSystemsRoutingModule} from "./isofh-systems-routing.module";
 
 
 @NgModule({
@@ -12,7 +12,7 @@ import {IsofhSystemsComponent} from "./isofh-systems.component";
     imports: [
         CommonModule,
         FormsModule,
-        JiraCompanyRoutingModule
+        IsofhSystemsRoutingModule
     ]
 })
 export class IsofhSystemsModule {
