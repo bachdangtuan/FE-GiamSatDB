@@ -6,7 +6,7 @@ import { EventService } from './core/service/event.service';
 import { LayoutContainerComponent } from './layout/layout-container.component';
 
 
-const rootRoute = loggedInUser() ? 'noi-bo/systems-team' : '';
+const rootRoute = loggedInUser() ? 'noi-bo/systems-team' : 'noi-bo/systems-team';
 
 const routes: Routes = [
   {
@@ -23,10 +23,14 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
       },
-      {
-        path: 'apps',
-        loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule)
-      }
+      // {
+      //   path: '',
+      //   loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
+      // },
+      // {
+      //   path: 'apps',
+      //   loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule)
+      // }
     ]
   },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },

@@ -42,7 +42,7 @@ export class LoginComponent implements OnInit {
 
     // get return url from route parameters or default to '/'
 
-    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/dashboard/ecommerce';
+    this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/noi-bo/systems-team';
 
   }
 

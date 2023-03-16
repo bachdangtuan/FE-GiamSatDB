@@ -22,10 +22,10 @@ const routes: Routes = [
     //     path: 'dashboard',
     //     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
     // },
-    {
-        path: 'widgets',
-        loadChildren: () => import('./widgets/widgets.module').then(m => m.WidgetsModule)
-    },
+    // {
+    //     path: 'widgets',
+    //     loadChildren: () => import('./widgets/widgets.module').then(m => m.WidgetsModule)
+    // },
     {path: 'pages', loadChildren: () => import('./extra-pages/extra-pages.module').then(m => m.ExtraPagesModule)},
     {path: 'icons', loadChildren: () => import('./icons/icons.module').then(m => m.IconsModule)},
     {path: 'tables', loadChildren: () => import('./tables/tables.module').then(m => m.TablesModule)},
