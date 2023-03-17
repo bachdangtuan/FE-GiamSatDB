@@ -206,14 +206,6 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [],
     },
-    {
-        key: 'bv-ytcc',
-        label: 'Y Tế Công Cộng',
-        isTitle: false,
-        icon: 'mail',
-        collapsed: true,
-        children: [],
-    },
     // { key: 'dashboard', label: 'Nội bộ ISofH', isTitle: true },
     // {
     //     key: 'dashboard',
