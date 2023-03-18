@@ -1,11 +1,12 @@
 import {Component, Injector, OnInit} from '@angular/core';
 import {SyncQueryParam} from "../../../core/decorators/syncParams.decorator";
-import {FormGroup} from "@angular/forms";
+import {FormControl, FormGroup} from "@angular/forms";
 import {BreadcrumbItem} from "../../../shared/page-title/page-title/page-title.model";
 import {ActivatedRoute, Router} from "@angular/router";
 import {FormSearchLogHelper} from "../../../core/helpers/formSearchLog.helper";
 import {LogBackupService} from "../../../core/service/log-backup.service";
-import {COLUMN_LOG} from "../../../core/constants/common";
+import {COLUMN_LOG, STATUS, STATUS_BACKUP} from "../../../core/constants/common";
+import {Select2Data, Select2UpdateEvent} from "ng-select2-component";
 
 @Component({
     selector: 'app-bv-e',
@@ -13,6 +14,7 @@ import {COLUMN_LOG} from "../../../core/constants/common";
     styleUrls: ['./bv-e.component.scss']
 })
 export class BvEComponent implements OnInit {
+
 
     @SyncQueryParam({
         parseIgnore: ["status"],
@@ -24,6 +26,9 @@ export class BvEComponent implements OnInit {
     records: any[] = [];
     columns: any[] = [];
     totalItems: any;
+    nameDatabase: Select2Data = []
+    statusDatabase: Select2Data = []
+
 
     constructor(
         public injector: Injector,
@@ -38,11 +43,13 @@ export class BvEComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.pageTitle = [{label: 'Log Backup BVE', path: '/', active: true}];
+        this.pageTitle = [{label: 'Log Backup Bệnh viện E', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'bve-db-slave-247',
             nameDatabase: ''
         });
+        this.nameDatabase = STATUS;
+        this.statusDatabase = STATUS_BACKUP
     }
 
     initTableCofig(): void {
@@ -70,4 +77,35 @@ export class BvEComponent implements OnInit {
         });
     }
 
+    changeSelectedName($event: Select2UpdateEvent) {
+        const valueSearch = $event.options[0].value
+        console.log(valueSearch)
+        if (valueSearch !== '10') {
+            this.formSearchAndFilter.addControl('nameDatabase', new FormControl())
+            this.formSearchAndFilter.patchValue({
+                nameDatabase: valueSearch,
+            });
+        } else {
+            this.formSearchAndFilter.removeControl('nameDatabase')
+        }
+
+
+        // console.log('huihu', $event.options[0])
+    }
+
+    changeSelectedStatus($event: Select2UpdateEvent) {
+        const valueSearch = $event.options[0].value
+        console.log(valueSearch)
+        if (valueSearch !== '10') {
+            this.formSearchAndFilter.addControl('status', new FormControl())
+            this.formSearchAndFilter.patchValue({
+                status: valueSearch,
+            });
+        } else {
+            this.formSearchAndFilter.removeControl('status')
+        }
+    }
+
 }
+// hostName: 'bve-db-slave-247',
+//     nameDatabase: ''

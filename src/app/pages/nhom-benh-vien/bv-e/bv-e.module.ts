@@ -6,6 +6,7 @@ import {UiModule} from "../../../shared/ui/ui.module";
 import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table.module";
 import {BvEComponent} from "./bv-e.component";
 import {BvERoutingModule} from "./bv-e-routing.module";
+import {Select2Module} from "ng-select2-component";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import {BvERoutingModule} from "./bv-e-routing.module";
         BvERoutingModule,
         PageTitleModule,
         UiModule,
-        AdvancedTableModule
+        AdvancedTableModule,
+        Select2Module
     ]
 })
 export class BvEModule {

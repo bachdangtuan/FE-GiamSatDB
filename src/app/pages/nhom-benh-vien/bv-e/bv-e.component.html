@@ -14,14 +14,23 @@
                             Tổng số <span class="">{{totalItems}}</span> tiến trình backup đã được thực hiện
                         </h5>
                     </div>
-                    <div class="col-1">
-                        <!--                        <select2 placeholder="Lọc trạng thái" id="select2-2" (update)="changeSelectedStatus($event)"-->
-                        <!--                                 [data]="status"></select2>-->
+                    <div class="col-2">
+                        <label>Lọc theo theo trạng thái backup</label>
+                        <select2 placeholder="Lọc theo trạng thái backup" id="select2-2"
+                                 (update)="changeSelectedStatus($event)"
+                                 [data]="statusDatabase"></select2>
+                    </div>
+                    <div class="col-2">
+                        <label>Lọc theo tên Database</label>
+                        <select2 placeholder="Lọc theo tên Database" id="select2-1"
+                                 (update)="changeSelectedName($event)"
+                                 [data]="nameDatabase"></select2>
                     </div>
                 </div>
 
                 <!-- table start -->
                 <app-advanced-table
+                        *ngIf="records.length >0; else noData"
                         [totalItems]="totalItems"
                         [page]="pageCurrent"
                         [limit]="limit"
@@ -36,11 +45,10 @@
                             <th>Hành động</th>
                         </tr>
                     </ng-template>
-
                     <ng-template #theContent>
                         <tr *ngFor="let i of records">
                             <td>
-                                <p class="m-0"> {{i.hostName}}</p>
+                                <p class="m-0 fw-semibold"> {{i.hostName}}</p>
                                 <small>Tên DB: {{ i.nameDatabase}}</small>
                             </td>
                             <td>
@@ -73,7 +81,7 @@
                                 <span>{{i?.DateBackup}}</span>
                             </td>
                             <td>
-                                <span>{{i?.nameDatabase === 'produce' ? '00:00:00' : '02:00:00'}}</span>
+                                <span>{{ '00:00:00'}}</span>
                             </td>
                             <td>
                                 <span>{{i?.TimeBackup}}</span>
@@ -89,6 +97,14 @@
                     </ng-template>
 
                 </app-advanced-table>
+                <ng-template #noData>
+                        <div class="text-center m-5">
+
+                            <h3>Không có dữ liệu hoặc viện này không sử dụng database này</h3>
+
+                        </div>
+                </ng-template>
+
             </div> <!-- end card body-->
         </div> <!-- end card -->
     </div><!-- end col-->
