@@ -1,18 +1,19 @@
 import {Component, Injector, OnInit} from '@angular/core';
-import {BreadcrumbItem} from "../../../shared/page-title/page-title/page-title.model";
-import {ActivatedRoute, Router} from "@angular/router";
-import {LogBackupService} from "../../../core/service/log-backup.service";
-import {FormSearchLogHelper} from "../../../core/helpers/formSearchLog.helper";
 import {SyncQueryParam} from "../../../core/decorators/syncParams.decorator";
 import {FormGroup} from "@angular/forms";
+import {BreadcrumbItem} from "../../../shared/page-title/page-title/page-title.model";
+import {ActivatedRoute, Router} from "@angular/router";
+import {FormSearchLogHelper} from "../../../core/helpers/formSearchLog.helper";
+import {LogBackupService} from "../../../core/service/log-backup.service";
 import {COLUMN_LOG} from "../../../core/constants/common";
 
 @Component({
-    selector: 'app-jira-company',
-    templateUrl: './jira-company.component.html',
-    styleUrls: ['./jira-company.component.scss']
+    selector: 'app-bv-e',
+    templateUrl: './bv-e.component.html',
+    styleUrls: ['./bv-e.component.scss']
 })
-export class JiraCompanyComponent implements OnInit {
+export class BvEComponent implements OnInit {
+
     @SyncQueryParam({
         parseIgnore: ["status"],
     })
@@ -37,10 +38,10 @@ export class JiraCompanyComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.pageTitle = [{label: 'Log Backup Jira', path: '/', active: true}];
+        this.pageTitle = [{label: 'Log Backup BVE', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
-            hostName: 'isofh-db-jira-new-54',
-            nameDatabase: 'jira_20221130'
+            hostName: 'bve-db-slave-247',
+            nameDatabase: ''
         });
     }
 
@@ -68,4 +69,5 @@ export class JiraCompanyComponent implements OnInit {
             page: data,
         });
     }
+
 }

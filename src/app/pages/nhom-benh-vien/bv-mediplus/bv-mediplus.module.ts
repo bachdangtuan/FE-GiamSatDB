@@ -1,25 +1,25 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
-import {JiraConfluenceRoutingModule} from "./jira-confluence-routing.module";
-import {JiraConfluenceComponent} from "./jira-confluence.component";
 import {PageTitleModule} from "../../../shared/page-title/page-title.module";
 import {UiModule} from "../../../shared/ui/ui.module";
 import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table.module";
+import {BvMediplusComponent} from "./bv-mediplus.component";
+import {BvMediplusRoutingModule} from "./bv-mediplus-routing.module";
 
 
 @NgModule({
     declarations: [
-        JiraConfluenceComponent
+        BvMediplusComponent
     ],
     imports: [
         CommonModule,
         FormsModule,
-        JiraConfluenceRoutingModule,
+        BvMediplusRoutingModule,
         PageTitleModule,
         UiModule,
         AdvancedTableModule
     ]
 })
-export class JiraConfluenceModule {
+export class BvMediplusModule {
 }

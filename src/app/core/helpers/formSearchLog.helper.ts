@@ -19,8 +19,9 @@ export class FormSearchLogHelper {
     private static initForm(data?: SearchLogParams): FormGroup {
         return new FormGroup({
             page: new FormControl(data?.page || 1),
-            limit: new FormControl(data?.limit || 10),
-            // status: new FormControl(data?.status),
+            limit: new FormControl(data?.limit || 6),
+            hostName: new FormControl(data?.hostName ),
+            nameDatabase: new FormControl(data?.nameDatabase),
             // type: new FormControl(data?.type || [""]),
         });
     }

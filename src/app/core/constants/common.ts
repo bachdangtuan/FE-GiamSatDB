@@ -36,13 +36,13 @@ export const COLUMN_LOG = [
         width: 150,
     },
     {
-        name: 'TimeBackup',
-        label: 'Time Backup',
-        width: 150,
+        name: 'TimeBackupStart',
+        label: 'Time Start',
+        width: 50,
     },
     {
-        name: 'responseTime',
-        label: 'Số Phút',
-        width: 50,
+        name: 'TimeBackupEnd',
+        label: 'Time End',
+        width: 150,
     },
 ];

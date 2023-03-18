@@ -1,14 +1,17 @@
 <!-- page title -->
-<app-page-title [breadcrumbItems]="pageTitle" title="Nhật ký backup database server Jira Software"></app-page-title>
+<app-page-title [breadcrumbItems]="pageTitle" title="Nhật ký backup database Bệnh Viện E"></app-page-title>
 <div class="row">
     <div class="col-12">
         <div class="card">
             <div class="card-body">
                 <div class="d-flex justify-content-between">
                     <div class="col-7">
-                        <h4 class="header-title">Danh sách thông tin backup database</h4>
+                        <h4 class="header-title">Danh sách thông tin backup database
+                            <img width="25" src="./assets/images/Postgresql.png" alt="postgresdb">
+                            postgres
+                        </h4>
                         <h5 class="text-dark font-14">
-                            Tổng số <span class="">{{totalItems}}</span> tiến trình đã được thực hiện
+                            Tổng số <span class="">{{totalItems}}</span> tiến trình backup đã được thực hiện
                         </h5>
                     </div>
                     <div class="col-1">
@@ -41,7 +44,9 @@
                                 <small>Tên DB: {{ i.nameDatabase}}</small>
                             </td>
                             <td>
-                                <span>{{i?.osSystems}}</span>
+                                <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)'">
+                                    <img width="85" src="./assets/images/centos.png" alt="centos">
+                                </ng-template>
                             </td>
                             <td>
                                 <span>{{i?.ipServer}}</span>
@@ -68,7 +73,7 @@
                                 <span>{{i?.DateBackup}}</span>
                             </td>
                             <td>
-                                <span>{{'01:00:00'}}</span>
+                                <span>{{i?.nameDatabase === 'produce' ? '00:00:00' : '02:00:00'}}</span>
                             </td>
                             <td>
                                 <span>{{i?.TimeBackup}}</span>
