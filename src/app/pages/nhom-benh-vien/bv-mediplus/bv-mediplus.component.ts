@@ -46,7 +46,9 @@ export class BvMediplusComponent implements OnInit {
         this.pageTitle = [{label: 'Log Backup Mediplus', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'medi-db-slave-01',
-            nameDatabase: ''
+            nameDatabase: '',
+            page: 1,
+            limit: 6,
         });
         this.nameDatabase = STATUS;
         this.statusDatabase = STATUS_BACKUP

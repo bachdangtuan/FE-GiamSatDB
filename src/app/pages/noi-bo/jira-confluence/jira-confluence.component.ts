@@ -40,7 +40,9 @@ export class JiraConfluenceComponent implements OnInit {
         this.pageTitle = [{label: 'Log Backup Jira', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'isofh-db-jira-new-54',
-            nameDatabase: 'conflu_test3'
+            nameDatabase: 'conflu_test3',
+            page: 1,
+            limit: 10,
         });
     }
 

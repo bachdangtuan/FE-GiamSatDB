@@ -46,7 +46,9 @@ export class BvEComponent implements OnInit {
         this.pageTitle = [{label: 'Log Backup Bệnh viện E', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'bve-db-slave-247',
-            nameDatabase: ''
+            nameDatabase: '',
+            page: 1,
+            limit: 6,
         });
         this.nameDatabase = STATUS;
         this.statusDatabase = STATUS_BACKUP
