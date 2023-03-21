@@ -85,7 +85,81 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
-
+    {
+        key: 'bv-xanhfon',
+        label: 'Bệnh viện Xanh Phôn',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-xanhfon',
+                label: 'Database Xanh Phôn',
+                link: 'benh-vien/bv-xanhfon',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
+    {
+        key: 'bv-bachmai',
+        label: 'Bệnh viện Bạch mai',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-bachmai',
+                label: 'Database Bạch Mai',
+                link: 'benh-vien/bv-bachmai',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
+    {
+        key: 'bv-allen',
+        label: 'Doctor Allen',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-allen',
+                label: 'Database Dr.Allen',
+                link: 'benh-vien/bv-allen',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
+    {
+        key: 'bv-tttm',
+        label: 'Trung tâm tim mạch',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-tttm',
+                label: 'Database TTTM',
+                link: 'benh-vien/bv-tttm',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
+    {
+        key: 'bv-dt',
+        label: 'Bệnh viện Đồng Tâm',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-dt',
+                label: 'Database BVĐT',
+                link: 'benh-vien/bv-dt',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
 
     // {
     //     key: 'bv-y',
