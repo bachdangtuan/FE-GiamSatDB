@@ -55,6 +55,9 @@
                                 <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)'">
                                     <img width="85" src="./assets/images/centos.png" alt="centos">
                                 </ng-template>
+                                <ng-template [ngIf]="i?.osSystems !== 'CentOS Linux 7 (Core)'">
+                                    <img width="85" src="./assets/images/centos.png" alt="centos">
+                                </ng-template>
                             </td>
                             <td>
                                 <span>{{i?.ipServer}}</span>
