@@ -39,16 +39,16 @@ export class BvYtccComponent implements OnInit {
         this.formSearchAndFilter = formService.form;
         this.getLogList()
         this.initTableCofig()
-    }
-
-    ngOnInit(): void {
-        this.pageTitle = [{label: 'Log Backup Mediplus', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'ytcc-db-slave-127',
             nameDatabase: '',
             page: 1,
             limit: 6,
         });
+    }
+
+    ngOnInit(): void {
+        this.pageTitle = [{label: 'Log Backup Mediplus', path: '/', active: true}];
         this.nameDatabase = STATUS;
         this.statusDatabase = STATUS_BACKUP
     }
