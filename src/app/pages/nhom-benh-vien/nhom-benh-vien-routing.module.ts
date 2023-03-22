@@ -1,8 +1,13 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
 import {BvXanhfonModule} from "./bv-xanhfon/bv-xanhfon.module";
+import {BvDaihocYModule} from "./bv-daihoc-y/bv-daihoc-y.module";
 
 const routes: Routes = [
+    {
+        path: 'bv-daihoc-y',
+        loadChildren: () => import('./bv-daihoc-y/bv-daihoc-y.module').then(m => m.BvDaihocYModule)
+    },
     {
         path: 'bv-e',
         loadChildren: () => import('./bv-e/bv-e.module').then(m => m.BvEModule)
@@ -30,6 +35,10 @@ const routes: Routes = [
     {
         path: 'bv-dt',
         loadChildren: () => import('./bv-dt/bv-dt.module').then(m => m.BvDtModule)
+    },
+    {
+        path: 'bv-ytcc',
+        loadChildren: () => import('./bv-ytcc/bv-ytcc.module').then(m => m.BvYtccModule)
     },
 ];
 

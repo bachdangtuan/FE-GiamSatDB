@@ -101,6 +101,21 @@ const MENU_ITEMS: MenuItem[] = [
         ],
     },
     {
+        key: 'bv-daihoc-y',
+        label: 'Bệnh viện ĐH Y',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-daihoc-y',
+                label: 'Database DHY',
+                link: 'benh-vien/bv-daihoc-y',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
+    {
         key: 'bv-bachmai',
         label: 'Bệnh viện Bạch mai',
         isTitle: false,
@@ -160,7 +175,21 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
-
+    {
+        key: 'bv-ytcc',
+        label: 'Bệnh viện YTCC',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-ytcc',
+                label: 'Database YTCC',
+                link: 'benh-vien/bv-ytcc',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
     // {
     //     key: 'bv-y',
     //     label: 'Bệnh viện Đại học Y',

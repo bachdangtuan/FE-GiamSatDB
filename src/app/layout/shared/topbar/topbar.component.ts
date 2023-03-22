@@ -336,7 +336,7 @@ export class TopbarComponent implements OnInit {
   * Toggles the right sidebar
   */
   toggleRightSidebar() {
-    this.settingsButtonClicked.emit();
+    // this.settingsButtonClicked.emit();
   }
 
   /**

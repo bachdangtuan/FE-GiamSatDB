@@ -14,18 +14,19 @@
                             Tổng số <span class="">{{totalItems}}</span> tiến trình backup đã được thực hiện
                         </h5>
                     </div>
+
                     <div class="col-2">
                         <label>Lọc theo theo trạng thái backup</label>
                         <select2 placeholder="Lọc theo trạng thái backup" id="select2-2"
                                  (update)="changeSelectedStatus($event)"
                                  [data]="statusDatabase"></select2>
                     </div>
-                    <div class="col-2">
-                        <label>Lọc theo tên Database</label>
-                        <select2 placeholder="Lọc theo tên Database" id="select2-1"
-                                 (update)="changeSelectedName($event)"
-                                 [data]="nameDatabase"></select2>
-                    </div>
+<!--                    <div class="col-2">-->
+<!--                        <label>Lọc theo tên Database</label>-->
+<!--                        <select2 placeholder="Lọc theo tên Database" id="select2-1"-->
+<!--                                 (update)="changeSelectedName($event)"-->
+<!--                                 [data]="nameDatabase"></select2>-->
+<!--                    </div>-->
                 </div>
 
                 <!-- table start -->

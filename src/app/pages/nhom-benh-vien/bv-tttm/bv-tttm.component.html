@@ -1,5 +1,5 @@
 <!-- page title -->
-<app-page-title [breadcrumbItems]="pageTitle" title="Nhật ký backup database Bệnh Viện Xanh Phôn"></app-page-title>
+<app-page-title [breadcrumbItems]="pageTitle" title="Nhật ký backup database Trung Tâm Tim Mạch"></app-page-title>
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -20,12 +20,12 @@
                                  (update)="changeSelectedStatus($event)"
                                  [data]="statusDatabase"></select2>
                     </div>
-                    <div class="col-2">
-                        <label>Lọc theo tên Database</label>
-                        <select2 placeholder="Lọc theo tên Database" id="select2-1"
-                                 (update)="changeSelectedName($event)"
-                                 [data]="nameDatabase"></select2>
-                    </div>
+<!--                    <div class="col-2">-->
+                    <!--                        <label>Lọc theo tên Database</label>-->
+                    <!--                        <select2 placeholder="Lọc theo tên Database" id="select2-1"-->
+                    <!--                                 (update)="changeSelectedName($event)"-->
+                    <!--                                 [data]="nameDatabase"></select2>-->
+                    <!--                    </div>-->
                 </div>
 
                 <!-- table start -->

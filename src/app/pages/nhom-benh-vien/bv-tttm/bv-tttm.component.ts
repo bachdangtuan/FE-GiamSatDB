@@ -43,7 +43,7 @@ export class BvTttmComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.pageTitle = [{label: 'Log Backup Mediplus', path: '/', active: true}];
+    this.pageTitle = [{label: 'Log Backup TTTM', path: '/', active: true}];
     this.formSearchAndFilter.patchValue({
       hostName: 'tttm-db-slave-sakura-106',
       nameDatabase: '',
@@ -79,22 +79,22 @@ export class BvTttmComponent implements OnInit {
     });
   }
 
-  changeSelectedName($event: Select2UpdateEvent) {
-    const valueSearch = $event.options[0].value
-    console.log(valueSearch)
-    if (valueSearch !== '10') {
-      this.formSearchAndFilter.addControl('nameDatabase', new FormControl())
-      this.formSearchAndFilter.patchValue({
-        nameDatabase: valueSearch,
-      });
-    } else {
-      this.formSearchAndFilter.removeControl('nameDatabase')
-    }
-
-
-    // console.log('huihu', $event.options[0])
-  }
-
+  // changeSelectedName($event: Select2UpdateEvent) {
+  //   const valueSearch = $event.options[0].value
+  //   console.log(valueSearch)
+  //   if (valueSearch !== '10') {
+  //     this.formSearchAndFilter.addControl('nameDatabase', new FormControl())
+  //     this.formSearchAndFilter.patchValue({
+  //       nameDatabase: valueSearch,
+  //     });
+  //   } else {
+  //     this.formSearchAndFilter.removeControl('nameDatabase')
+  //   }
+  //
+  //
+  //   // console.log('huihu', $event.options[0])
+  // }
+  //
   changeSelectedStatus($event: Select2UpdateEvent) {
     const valueSearch = $event.options[0].value
     console.log(valueSearch)

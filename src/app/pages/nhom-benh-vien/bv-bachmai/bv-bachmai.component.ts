@@ -43,7 +43,7 @@ export class BvBachmaiComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.pageTitle = [{label: 'Log Backup Mediplus', path: '/', active: true}];
+        this.pageTitle = [{label: 'Log Backup Bạch Mai', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'bvbm-db-30',
             nameDatabase: '',

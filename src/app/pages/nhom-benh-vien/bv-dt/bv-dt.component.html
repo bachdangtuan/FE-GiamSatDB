@@ -1,5 +1,5 @@
 <!-- page title -->
-<app-page-title [breadcrumbItems]="pageTitle" title="Nhật ký backup database Đồng Tâm"></app-page-title>
+<app-page-title [breadcrumbItems]="pageTitle" title="Nhật ký backup database Bệnh viện Đồng Tâm"></app-page-title>
 <div class="row">
     <div class="col-12">
         <div class="card">
@@ -55,6 +55,10 @@
                                 <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)'">
                                     <img width="85" src="./assets/images/centos.png" alt="centos">
                                 </ng-template>
+                                <ng-template [ngIf]="i?.osSystems !== 'CentOS Linux 7 (Core)'">
+                                    <img width="85" src="./assets/images/ubuntu.png" alt="centos">
+                                </ng-template>
+
                             </td>
                             <td>
                                 <span>{{i?.ipServer}}</span>

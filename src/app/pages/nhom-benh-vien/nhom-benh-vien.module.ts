@@ -10,6 +10,7 @@ import { BvBachmaiComponent } from './bv-bachmai/bv-bachmai.component';
 import { BvDrAllenComponent } from './bv-dr-allen/bv-dr-allen.component';
 import { BvTttmComponent } from './bv-tttm/bv-tttm.component';
 import { BvDtComponent } from './bv-dt/bv-dt.component';
+import { BvYtccComponent } from './bv-ytcc/bv-ytcc.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { BvDtComponent } from './bv-dt/bv-dt.component';
     BvDrAllenComponent,
     BvTttmComponent,
     BvDtComponent,
+    BvYtccComponent,
 
   ],
     imports: [
