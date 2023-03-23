@@ -40,6 +40,10 @@ const routes: Routes = [
         path: 'bv-ytcc',
         loadChildren: () => import('./bv-ytcc/bv-ytcc.module').then(m => m.BvYtccModule)
     },
+    {
+        path: 'bv-dkth',
+        loadChildren: () => import('./bv-dakhoa-thanh-hoa/bv-dakhoa-thanh-hoa.module').then(m => m.BvDakhoaThanhHoaModule)
+    },
 ];
 
 @NgModule({

@@ -190,6 +190,29 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
+    {
+        key: 'bv-dkth',
+        label: 'Bệnh viện DKTH',
+        isTitle: false,
+        icon: 'mail',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-dkth',
+                label: 'Database Prod',
+                link: 'benh-vien/bv-dkth/db-prod',
+                parentKey: 'benh-vien',
+            },
+            {
+                key: 'bv-dkth',
+                label: 'Database EMR',
+                link: 'benh-vien/bv-dkth/db-emr',
+                parentKey: 'benh-vien',
+            },
+        ],
+    },
+
+
     // {
     //     key: 'bv-y',
     //     label: 'Bệnh viện Đại học Y',
