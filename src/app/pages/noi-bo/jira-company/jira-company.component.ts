@@ -40,7 +40,7 @@ export class JiraCompanyComponent implements OnInit {
         this.pageTitle = [{label: 'Log Backup Jira', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'isofh-db-jira-new-54',
-            nameDatabase: 'jira_20221130',
+            nameDatabase: 'jira_230403',
             page: 1,
             limit: 6,
         });
