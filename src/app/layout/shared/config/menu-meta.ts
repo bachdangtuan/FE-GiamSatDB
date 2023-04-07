@@ -198,16 +198,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-dkth',
+                key: 'bv-dkth-db-prod',
                 label: 'Database Prod',
                 link: 'benh-vien/bv-dkth/db-prod',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-dkth',
             },
             {
-                key: 'bv-dkth',
+                key: 'bv-dkth-db-emr',
                 label: 'Database EMR',
                 link: 'benh-vien/bv-dkth/db-emr',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-dkth',
             },
         ],
     },
