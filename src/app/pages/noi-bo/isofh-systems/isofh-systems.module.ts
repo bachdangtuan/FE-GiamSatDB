@@ -3,6 +3,7 @@ import {CommonModule} from '@angular/common';
 import {FormsModule} from '@angular/forms';
 import {IsofhSystemsComponent} from "./isofh-systems.component";
 import {IsofhSystemsRoutingModule} from "./isofh-systems-routing.module";
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import {IsofhSystemsRoutingModule} from "./isofh-systems-routing.module";
     imports: [
         CommonModule,
         FormsModule,
-        IsofhSystemsRoutingModule
+        IsofhSystemsRoutingModule,
+        ProfileModule
     ]
 })
 export class IsofhSystemsModule {

@@ -11,19 +11,19 @@
             <div class="card-body">
                 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class=" nav-pills navtab-bg nav-justified p-1">
                     <li [ngbNavItem]="'activity'">
-                        <a ngbNavLink>Activity</a>
+                        <a ngbNavLink>DS Server vật lý</a>
                         <ng-template ngbNavContent>
                             <app-profile-activity [activities]="activities"></app-profile-activity>
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="'messages'">
-                        <a ngbNavLink>Messages</a>
+                        <a ngbNavLink>Sơ đồ hoạt động</a>
                         <ng-template ngbNavContent>
                             <app-profile-messages [messages]="messages"></app-profile-messages>
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="'projects'">
-                        <a ngbNavLink>Projects</a>
+                        <a ngbNavLink>DS Dịch vụ</a>
                         <ng-template ngbNavContent>
                             <app-profile-projects [projects]="projects"></app-profile-projects>
                         </ng-template>

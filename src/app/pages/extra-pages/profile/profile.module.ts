@@ -13,22 +13,25 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
 
 
 @NgModule({
-  declarations: [
-    ProfileComponent,
-    ActivityComponent,
-    MessagesComponent,
-    ProjectsComponent,
-    TasksComponent,
-    FilesComponent,
-    PersonalInfoComponent
-  ],
-  imports: [
-    CommonModule,
-    NgbProgressbarModule,
-    NgbNavModule,
-    NgbTooltipModule,
-    PageTitleModule,
-    ProfileRoutingModule
-  ]
+    declarations: [
+        ProfileComponent,
+        ActivityComponent,
+        MessagesComponent,
+        ProjectsComponent,
+        TasksComponent,
+        FilesComponent,
+        PersonalInfoComponent
+    ],
+    exports: [
+        ProfileComponent
+    ],
+    imports: [
+        CommonModule,
+        NgbProgressbarModule,
+        NgbNavModule,
+        NgbTooltipModule,
+        PageTitleModule,
+        ProfileRoutingModule
+    ]
 })
 export class ProfileModule { }
