@@ -7,11 +7,13 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {BvEComponent} from "./bv-e.component";
 import {BvERoutingModule} from "./bv-e-routing.module";
 import {Select2Module} from "ng-select2-component";
+import { BvEInfoComponent } from './bv-e-info/bv-e-info.component';
 
 
 @NgModule({
     declarations: [
-        BvEComponent
+        BvEComponent,
+        BvEInfoComponent
     ],
     imports: [
         CommonModule,

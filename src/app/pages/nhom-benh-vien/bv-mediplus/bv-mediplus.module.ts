@@ -7,11 +7,13 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {BvMediplusComponent} from "./bv-mediplus.component";
 import {BvMediplusRoutingModule} from "./bv-mediplus-routing.module";
 import {Select2Module} from "ng-select2-component";
+import { BvMediplusInfoComponent } from './bv-mediplus-info/bv-mediplus-info.component';
 
 
 @NgModule({
     declarations: [
-        BvMediplusComponent
+        BvMediplusComponent,
+        BvMediplusInfoComponent
     ],
     imports: [
         CommonModule,

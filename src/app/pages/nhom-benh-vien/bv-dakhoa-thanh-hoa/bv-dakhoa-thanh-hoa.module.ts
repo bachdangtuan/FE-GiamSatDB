@@ -8,12 +8,14 @@ import {Select2Module} from "ng-select2-component";
 import {BvDakhoaThanhHoaRoutingModule} from "./bv-dakhoa-thanh-hoa-routing.module";
 import { BvDkthEmrComponent } from './bv-dkth-emr/bv-dkth-emr.component';
 import { BvDkthProdComponent } from './bv-dkth-prod/bv-dkth-prod.component';
+import { BvDkthInfoComponent } from './bv-dkth-info/bv-dkth-info.component';
 
 
 @NgModule({
     declarations: [
     BvDkthEmrComponent,
-    BvDkthProdComponent
+    BvDkthProdComponent,
+    BvDkthInfoComponent
   ],
     imports: [
         CommonModule,

@@ -6,9 +6,12 @@ import {UiModule} from "../../../shared/ui/ui.module";
 import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table.module";
 import {Select2Module} from "ng-select2-component";
 import {BvDtRoutingModule} from "./bv-dt-routing.module";
+import { BvDtInfoComponent } from './bv-dt-info/bv-dt-info.component';
 
 @NgModule({
-    declarations: [],
+    declarations: [
+    BvDtInfoComponent
+  ],
     imports: [
         CommonModule,
         FormsModule,

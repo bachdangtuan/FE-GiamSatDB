@@ -6,10 +6,13 @@ import {UiModule} from "../../../shared/ui/ui.module";
 import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table.module";
 import {Select2Module} from "ng-select2-component";
 import {BvYtccRoutingModule} from "./bv-ytcc-routing.module";
+import { BvYtccInfoComponent } from './bv-ytcc-info/bv-ytcc-info.component';
 
 
 @NgModule({
-    declarations: [],
+    declarations: [
+    BvYtccInfoComponent
+  ],
     imports: [
         CommonModule,
         FormsModule,

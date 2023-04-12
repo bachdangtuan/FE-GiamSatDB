@@ -36,7 +36,7 @@ const MENU_ITEMS: MenuItem[] = [
         children: [
             {
                 key: 'sys-team',
-                label: 'Systems Team ISofH',
+                label: 'Thông tin server ISofH',
                 link: '/noi-bo/systems-team',
                 parentKey: 'noi-bo',
             },
@@ -63,10 +63,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-e',
+                key: 'bv-e-info',
+                label: 'Thông tin server Viện E',
+                link: 'benh-vien/bv-e/info',
+                parentKey: 'bv-e',
+            },
+            {
+                key: 'bv-e-database',
                 label: 'Database Prod Viện E',
                 link: 'benh-vien/bv-e',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-e',
             },
         ],
     },
@@ -78,10 +84,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-mediplus',
+                key: 'bv-mediplus-info',
+                label: 'Thông tin server MediPlus',
+                link: 'benh-vien/bv-mediplus/info',
+                parentKey: 'bv-mediplus',
+            },
+            {
+                key: 'bv-mediplus-database',
                 label: 'Database Prod Medi+',
                 link: 'benh-vien/bv-mediplus',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-mediplus',
             },
         ],
     },
@@ -93,10 +105,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-xanhfon',
+                key: 'bv-xanhfon-info',
+                label: 'Thông tin server Xanh Phôn',
+                link: 'benh-vien/bv-xanhfon/info',
+                parentKey: 'bv-xanhfon',
+            },
+            {
+                key: 'bv-xanhfon-database',
                 label: 'Database Xanh Phôn',
                 link: 'benh-vien/bv-xanhfon',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-xanhfon',
             },
         ],
     },
@@ -108,10 +126,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-daihoc-y',
+                key: 'bv-daihoc-info',
+                label: 'Thông tin server DHY',
+                link: 'benh-vien/bv-daihoc-y/info',
+                parentKey: 'bv-daihoc-y',
+            },
+            {
+                key: 'bv-daihoc-y-database',
                 label: 'Database DHY',
                 link: 'benh-vien/bv-daihoc-y',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-daihoc-y',
             },
         ],
     },
@@ -123,10 +147,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-bachmai',
+                key: 'bv-bachmai-info',
+                label: 'Thông tin server Bạch Mai',
+                link: 'benh-vien/bv-bachmai/info',
+                parentKey: 'bv-bachmai',
+            },
+            {
+                key: 'bv-bachmai-database',
                 label: 'Database Bạch Mai',
                 link: 'benh-vien/bv-bachmai',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-bachmai',
             },
         ],
     },
@@ -137,6 +167,12 @@ const MENU_ITEMS: MenuItem[] = [
         icon: 'mail',
         collapsed: true,
         children: [
+            {
+                key: 'bv-allen-info',
+                label: 'Thông tin server Dr.Allen',
+                link: 'benh-vien/bv-allen/info',
+                parentKey: 'bv-allen',
+            },
             {
                 key: 'bv-allen',
                 label: 'Database Dr.Allen',
@@ -153,10 +189,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-tttm',
+                key: 'bv-tttm-info',
+                label: 'Thông tin server TTTM',
+                link: 'benh-vien/bv-tttm/info',
+                parentKey: 'bv-tttm',
+            },
+            {
+                key: 'bv-tttm-database',
                 label: 'Database TTTM',
                 link: 'benh-vien/bv-tttm',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-tttm',
             },
         ],
     },
@@ -168,10 +210,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-dt',
+                key: 'bv-dt-info',
+                label: 'Thông tin server Đồng Tâm',
+                link: 'benh-vien/bv-dt/info',
+                parentKey: 'bv-dt',
+            },
+            {
+                key: 'bv-dt-database',
                 label: 'Database BVĐT',
                 link: 'benh-vien/bv-dt',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-dt',
             },
         ],
     },
@@ -183,10 +231,16 @@ const MENU_ITEMS: MenuItem[] = [
         collapsed: true,
         children: [
             {
-                key: 'bv-ytcc',
+                key: 'bv-ytcc-info',
+                label: 'Thông tin server YTCC',
+                link: 'benh-vien/bv-ytcc/info',
+                parentKey: 'bv-ytcc',
+            },
+            {
+                key: 'bv-ytcc-database',
                 label: 'Database YTCC',
                 link: 'benh-vien/bv-ytcc',
-                parentKey: 'benh-vien',
+                parentKey: 'bv-ytcc',
             },
         ],
     },
@@ -197,6 +251,12 @@ const MENU_ITEMS: MenuItem[] = [
         icon: 'mail',
         collapsed: true,
         children: [
+            {
+                key: 'bv-dkth-info',
+                label: 'Thông tin server ĐKTH',
+                link: 'benh-vien/bv-dkth/info',
+                parentKey: 'bv-dkth',
+            },
             {
                 key: 'bv-dkth-db-prod',
                 label: 'Database Prod',
