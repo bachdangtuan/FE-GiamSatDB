@@ -1,5 +1,25 @@
 import { ActivityItem, FileItem, Message } from "./profile.model";
 
+
+
+
+const SERVER_PHYSICAL_ISOFH = [
+    {
+        id: 1,
+        type_machine: 'PowerEdge R740',
+        cpu:'32 CPUs x Intel(R) Xeon(R) Gold 6226R CPU @ 2.90GHz',
+        ram: '500Gb',
+        disk: '1500Gb',
+    },
+
+]
+
+
+
+
+
+
+
 const ACTIVITYTIMELINE: ActivityItem[] = [
     {
         id: 1,

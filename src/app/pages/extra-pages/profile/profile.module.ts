@@ -10,6 +10,8 @@ import { ProjectsComponent } from './projects/projects.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { FilesComponent } from './files/files.component';
 import { PersonalInfoComponent } from './personal-info/personal-info.component';
+import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table.module";
+import {UiModule} from "../../../shared/ui/ui.module";
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { PersonalInfoComponent } from './personal-info/personal-info.component';
         NgbNavModule,
         NgbTooltipModule,
         PageTitleModule,
-        ProfileRoutingModule
+        ProfileRoutingModule,
+        AdvancedTableModule,
+        UiModule
     ]
 })
 export class ProfileModule { }

@@ -15,12 +15,13 @@ import {ActivityItem, FileItem, Message, UserInfo} from './profile.model';
 })
 export class ProfileComponent implements OnInit {
     @Input() message: any;
+    @Input() server: any;
     pageTitle: BreadcrumbItem[] = [];
     user?: UserInfo;
     activities: ActivityItem[] = [];
     projects: Project[] = [];
     files: FileItem[] = [];
-    messages: Message[] = [];
+    messages: any[] = [];
     taskList: ListTaskItem[] = [];
 
     active: string = 'activity';
@@ -45,7 +46,7 @@ export class ProfileComponent implements OnInit {
         //     address: '1975 Boring Lane, San Francisco, California, United States - 94108',
         //     skills: ['UI Design', 'UX', 'Sketch', 'Photoshop', 'Frontend']
         // }
-
+        this.messages = this.server
         this.user = this.message
         // this._fetchData();
     }

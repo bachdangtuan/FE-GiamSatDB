@@ -50,6 +50,35 @@ export const COLUMN_LOG = [
 ];
 
 
+export const COLUMN_SERVER_PHYSICAL =[
+    {
+        name: 'type',
+        label: 'Dòng máy',
+        width: 300,
+    },
+    {
+        name: 'ip',
+        label: 'Địa chỉ IP',
+        width: 200,
+    },
+    {
+        name: 'cpu',
+        label: 'Cấu hình CPU',
+        width: 200,
+    },
+    {
+        name: 'ram',
+        label: 'Cấu hình Ram',
+        width: 200,
+    },
+    {
+        name: 'disk',
+        label: 'Dung lượng ổ cứng',
+        width: 200,
+    },
+]
+
+
 // NAME DATABSE
 export const STATUS_CONTENT = {
     DB_QMS: 'Database QMS',
