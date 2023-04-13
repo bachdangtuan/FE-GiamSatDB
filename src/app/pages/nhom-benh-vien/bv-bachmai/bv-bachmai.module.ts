@@ -7,6 +7,7 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {Select2Module} from "ng-select2-component";
 import {BvBachmaiRoutingModule} from "./bv-bachmai-routing.module";
 import { BvBachmaiInfoComponent } from './bv-bachmai-info/bv-bachmai-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BvBachmaiInfoComponent } from './bv-bachmai-info/bv-bachmai-info.compon
         BvBachmaiRoutingModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvBachmaiModule {

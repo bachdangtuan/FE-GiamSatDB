@@ -7,6 +7,7 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {Select2Module} from "ng-select2-component";
 import {BvTttmRoutingModule} from "./bv-tttm-routing.module";
 import { BvTttmInfoComponent } from './bv-tttm-info/bv-tttm-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BvTttmInfoComponent } from './bv-tttm-info/bv-tttm-info.component';
         PageTitleModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvTttmModule {

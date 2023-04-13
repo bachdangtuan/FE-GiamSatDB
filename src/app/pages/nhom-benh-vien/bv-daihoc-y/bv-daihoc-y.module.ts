@@ -7,6 +7,7 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {Select2Module} from "ng-select2-component";
 import {BvDaihocYRoutingModule} from "./bv-daihoc-y-routing.module";
 import { BvDaihocYInfoComponent } from './bv-daihoc-y-info/bv-daihoc-y-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BvDaihocYInfoComponent } from './bv-daihoc-y-info/bv-daihoc-y-info.comp
         BvDaihocYRoutingModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvDaihocYModule {

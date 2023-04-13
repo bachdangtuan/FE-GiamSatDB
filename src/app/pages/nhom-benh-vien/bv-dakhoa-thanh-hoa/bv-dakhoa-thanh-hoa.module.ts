@@ -9,6 +9,7 @@ import {BvDakhoaThanhHoaRoutingModule} from "./bv-dakhoa-thanh-hoa-routing.modul
 import { BvDkthEmrComponent } from './bv-dkth-emr/bv-dkth-emr.component';
 import { BvDkthProdComponent } from './bv-dkth-prod/bv-dkth-prod.component';
 import { BvDkthInfoComponent } from './bv-dkth-info/bv-dkth-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { BvDkthInfoComponent } from './bv-dkth-info/bv-dkth-info.component';
         BvDakhoaThanhHoaRoutingModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvDakhoaThanhHoaModule {

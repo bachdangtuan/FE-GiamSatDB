@@ -7,6 +7,7 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {Select2Module} from "ng-select2-component";
 import {BvYtccRoutingModule} from "./bv-ytcc-routing.module";
 import { BvYtccInfoComponent } from './bv-ytcc-info/bv-ytcc-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { BvYtccInfoComponent } from './bv-ytcc-info/bv-ytcc-info.component';
         PageTitleModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvYtccModule {

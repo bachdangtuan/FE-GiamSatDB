@@ -8,6 +8,7 @@ import {BvMediplusComponent} from "./bv-mediplus.component";
 import {BvMediplusRoutingModule} from "./bv-mediplus-routing.module";
 import {Select2Module} from "ng-select2-component";
 import { BvMediplusInfoComponent } from './bv-mediplus-info/bv-mediplus-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BvMediplusInfoComponent } from './bv-mediplus-info/bv-mediplus-info.com
         PageTitleModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvMediplusModule {

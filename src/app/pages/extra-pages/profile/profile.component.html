@@ -11,31 +11,31 @@
             <div class="card-body">
                 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class=" nav-pills navtab-bg nav-justified p-1">
                     <li [ngbNavItem]="'activity'">
-                        <a ngbNavLink>DS Server vật lý</a>
+                        <a ngbNavLink>Sơ đồ hoạt động</a>
                         <ng-template ngbNavContent>
                             <app-profile-activity [activities]="activities"></app-profile-activity>
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="'messages'">
-                        <a ngbNavLink>Sơ đồ hoạt động</a>
+                        <a ngbNavLink>Danh sách máy chủ</a>
                         <ng-template ngbNavContent>
                             <app-profile-messages [messages]="messages"></app-profile-messages>
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="'projects'">
-                        <a ngbNavLink>DS Dịch vụ</a>
+                        <a ngbNavLink>Danh sách dịch vụ</a>
                         <ng-template ngbNavContent>
                             <app-profile-projects [projects]="projects"></app-profile-projects>
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="'tasks'">
-                        <a ngbNavLink>Tasks</a>
+                        <a ngbNavLink>Thông tin khác</a>
                         <ng-template ngbNavContent>
                             <app-profile-tasks [taskList]="taskList"></app-profile-tasks>
                         </ng-template>
                     </li>
                     <li [ngbNavItem]="'files'">
-                        <a ngbNavLink>Files</a>
+                        <a ngbNavLink>Thông tin khác</a>
                         <ng-template ngbNavContent>
                             <app-profile-files [files]="files"></app-profile-files>
                         </ng-template>

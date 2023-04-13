@@ -8,6 +8,7 @@ import {BvEComponent} from "./bv-e.component";
 import {BvERoutingModule} from "./bv-e-routing.module";
 import {Select2Module} from "ng-select2-component";
 import { BvEInfoComponent } from './bv-e-info/bv-e-info.component';
+import {ProfileModule} from "../../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { BvEInfoComponent } from './bv-e-info/bv-e-info.component';
         PageTitleModule,
         UiModule,
         AdvancedTableModule,
-        Select2Module
+        Select2Module,
+        ProfileModule
     ]
 })
 export class BvEModule {
