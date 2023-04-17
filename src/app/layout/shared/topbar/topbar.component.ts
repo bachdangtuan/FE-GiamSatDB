@@ -215,11 +215,11 @@ export class TopbarComponent implements OnInit {
    */
   _fetchProfileOptions(): void {
     this.profileOptions = [
-      {
-        label: 'My Account',
-        icon: 'user',
-        redirectTo: '/pages/profile',
-      },
+      // {
+      //   label: 'My Account',
+      //   icon: 'user',
+      //   redirectTo: '/pages/profile',
+      // },
       // {
       //   label: 'Lock Screen',
       //   icon: 'lock',

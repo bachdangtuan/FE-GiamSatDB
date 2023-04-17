@@ -24,7 +24,7 @@ export class ProfileComponent implements OnInit {
     messages: any[] = [];
     taskList: ListTaskItem[] = [];
 
-    active: string = 'activity';
+    active: string = 'messages';
 
 
     constructor(private authService: AuthenticationService) {

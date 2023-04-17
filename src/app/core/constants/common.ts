@@ -50,30 +50,40 @@ export const COLUMN_LOG = [
 ];
 
 
-export const COLUMN_SERVER_PHYSICAL =[
+export const COLUMN_SERVER_PHYSICAL = [
     {
         name: 'type',
         label: 'Dòng máy',
-        width: 300,
+        width: 80,
+    },
+    {
+        name: 'type',
+        label: 'Hãng',
+        width: 100,
     },
     {
         name: 'ip',
         label: 'Địa chỉ IP',
-        width: 200,
+        width: 100,
+    },
+    {
+        name: 'service',
+        label: 'Đã cài đặt',
+        width: 100,
     },
     {
         name: 'cpu',
-        label: 'Cấu hình CPU',
-        width: 200,
+        label: 'CPU',
+        width: 100,
     },
     {
         name: 'ram',
-        label: 'Cấu hình Ram',
-        width: 200,
+        label: 'Ram',
+        width: 100,
     },
     {
         name: 'disk',
-        label: 'Dung lượng ổ cứng',
+        label: 'Disk',
         width: 200,
     },
 ]

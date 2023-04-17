@@ -1,5 +1,3 @@
-
-
 <app-advanced-table
         [totalItems]="totalItems"
         [page]="pageCurrent"
@@ -22,7 +20,18 @@
                 <span>{{i?.type_machine}}</span>
             </td>
             <td>
+                <div *ngIf="i?.provider === 'dell'; else providerOther">
+                    <img src="./assets/images/Dell_Logo.png" alt="" width="50">
+                </div>
+                <ng-template #providerOther>
+                    <img src="./assets/images/hpe.png" alt="" width="50">
+                </ng-template>
+            </td>
+            <td>
                 <span>{{i?.ip}}</span>
+            </td>
+            <td>
+                <span>{{i?.service}}</span>
             </td>
             <td>
                 <span>{{i?.cpu}}</span>
@@ -44,7 +53,6 @@
     </ng-template>
 
 </app-advanced-table>
-
 
 
 <!--<h4 class="mt-1 fs-15 fw-bold text-uppercase">Messages</h4>-->

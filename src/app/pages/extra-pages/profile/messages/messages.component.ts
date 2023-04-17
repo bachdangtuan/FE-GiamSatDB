@@ -16,7 +16,7 @@ export class MessagesComponent implements OnInit {
     pageCurrent: any
     records: any[] = [];
     columns: any[] = [];
-    totalItems: any;
+    totalItems: any
 
     constructor() {
         this.initTableCofig()
@@ -25,6 +25,11 @@ export class MessagesComponent implements OnInit {
     ngOnInit(): void {
         console.log('messages', this.messages)
         this.records = this.messages
+        this.limit = 10;
+        this.totalItems = this.messages.length;
+        this.pageCurrent = 1;
+
+
     }
 
     initTableCofig(): void {
