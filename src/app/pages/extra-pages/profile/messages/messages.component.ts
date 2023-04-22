@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {Message} from '../profile.model';
 import {BreadcrumbItem} from "../../../../shared/page-title/page-title/page-title.model";
 import {COLUMN_LOG, COLUMN_SERVER_PHYSICAL} from "../../../../core/constants/common";
+import {Router} from '@angular/router';
 
 @Component({
     selector: 'app-profile-messages',
@@ -18,7 +19,9 @@ export class MessagesComponent implements OnInit {
     columns: any[] = [];
     totalItems: any
 
-    constructor() {
+    constructor(
+        private router: Router
+    ) {
         this.initTableCofig()
     }
 
@@ -40,6 +43,10 @@ export class MessagesComponent implements OnInit {
         // this.formService.form.patchValue({
         //   page: data,
         // });
+    }
+
+    showDetail(service: any) {
+        this.router.navigate(['/apps/projects/details'], { queryParams: { id: service } });
     }
 
 }

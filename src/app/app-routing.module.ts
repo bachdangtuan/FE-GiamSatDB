@@ -23,10 +23,10 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule)
       },
-      // {
-      //   path: 'apps',
-      //   loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule)
-      // }
+      {
+        path: 'apps',
+        loadChildren: () => import('./apps/apps.module').then(m => m.AppsModule)
+      }
     ]
   },
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },

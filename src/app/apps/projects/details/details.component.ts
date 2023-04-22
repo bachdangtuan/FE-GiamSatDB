@@ -17,18 +17,24 @@ export class DetailsComponent implements OnInit {
   constructor (private route: ActivatedRoute, private titleService: Title) {
     titleService.setTitle("Project Details | Shreyu - Responsive Angular and Bootstrap 5 Admin Dashboard Template");
   }
-
+  projectId: any;
 
   ngOnInit(): void {
+    // this.route.queryParams.subscribe(params => {
+    //   this.projectId = params['id'];
+    // });
+
     this.route.queryParams.subscribe(params => {
-      if (params && params.hasOwnProperty('id')) {
-        this.selectedProject = PROJECTLIST.filter(x => String(x.id) === params['id'])[0];
-      } else {
-        this.selectedProject = PROJECTLIST[0];
-      }
+      this.projectId = params['id'];
+      console.log('params',this.projectId)
+      // if (params && params.hasOwnProperty('id')) {
+      //   this.selectedProject = PROJECTLIST.filter(x => String(x.id) === params['id'])[0];
+      // } else {
+      //   this.selectedProject = PROJECTLIST[0];
+      // }
     });
 
-    this._fetchData();
+    // this._fetchData();
   }
 
   /**
