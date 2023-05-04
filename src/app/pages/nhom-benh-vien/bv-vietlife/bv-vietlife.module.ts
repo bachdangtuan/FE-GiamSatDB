@@ -7,12 +7,11 @@ import {AdvancedTableModule} from "../../../shared/advanced-table/advanced-table
 import {Select2Module} from "ng-select2-component";
 import {BvVietlifeRoutingModule} from "./bv-vietlife-routing.module";
 import {ProfileModule} from "../../extra-pages/profile/profile.module";
-import {BvVietmyInfoComponent} from "../bv-vietmy/bv-vietmy-info/bv-vietmy-info.component";
 
 
 @NgModule({
     declarations: [
-        BvVietmyInfoComponent
+
     ],
     imports: [
         CommonModule,
