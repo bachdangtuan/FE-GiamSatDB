@@ -120,7 +120,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-daihoc-y',
-        label: 'Bệnh viện ĐH Y (x)',
+        label: 'Bệnh viện ĐH Y',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -273,7 +273,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-psta',
-        label: 'Bệnh viện PSTA (x)',
+        label: 'Bệnh viện PSTA',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -294,7 +294,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-phoi',
-        label: 'Bệnh viện Phổi (x)',
+        label: 'Bệnh viện Phổi',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -315,29 +315,29 @@ const MENU_ITEMS: MenuItem[] = [
     },
 
     {
-        key: 'bv-qy10',
-        label: 'Bệnh viện QY 110 (x)',
+        key: 'bv-qy110',
+        label: 'Bệnh viện QY 110',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
         children: [
             {
-                key: 'bv-qy10-info',
+                key: 'bv-qy110-info',
                 label: 'Thông tin server QY110',
-                link: 'benh-vien/bv-qy10/info',
-                parentKey: 'bv-qy10',
+                link: 'benh-vien/bv-qy110/info',
+                parentKey: 'bv-qy110',
             },
             {
-                key: 'bv-qy10-database',
+                key: 'bv-qy110-database',
                 label: 'Database QY110',
-                link: 'benh-vien/bv-qy10',
-                parentKey: 'bv-qy10',
+                link: 'benh-vien/bv-qy110',
+                parentKey: 'bv-qy110',
             },
         ],
     },
     {
         key: 'bv-vietlife',
-        label: 'Bệnh viện VietLife (x)',
+        label: 'Bệnh viện VietLife',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -358,7 +358,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-myrehab',
-        label: 'MyRehab (x)',
+        label: 'MyRehab',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -379,7 +379,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-ctm',
-        label: 'Chân Trời Mới (x)',
+        label: 'Chân Trời Mới',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -388,7 +388,7 @@ const MENU_ITEMS: MenuItem[] = [
                 key: 'bv-ctm-info',
                 label: 'Thông tin server CTM',
                 link: 'benh-vien/bv-ctm/info',
-                parentKey: 'bv-myrehab',
+                parentKey: 'bv-ctm',
             },
             {
                 key: 'bv-ctm-database',
@@ -400,7 +400,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-vietmy',
-        label: 'BV Việt Mỹ (x)',
+        label: 'BV Việt Mỹ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -421,7 +421,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-dongtam',
-        label: 'BV Đồng Tâm (x)',
+        label: 'BV Đồng Tâm',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -442,7 +442,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-thaihoa',
-        label: 'BV Thái Hòa (x)',
+        label: 'BV Thái Hòa',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -463,7 +463,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-vietnhat',
-        label: 'BV Việt Nhật (x)',
+        label: 'BV Việt Nhật',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -484,7 +484,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-ubkh',
-        label: 'UB Khánh Hòa (x)',
+        label: 'UB Khánh Hòa',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
