@@ -40,7 +40,7 @@ export class BvPstaComponent implements OnInit {
     this.getLogList()
     this.initTableCofig()
     this.formSearchAndFilter.patchValue({
-      hostName: 'ytcc-db-slave-127',
+      hostName: 'pkta-db-slave-103',
       nameDatabase: '',
       page: 1,
       limit: 6,

@@ -44,7 +44,7 @@ export const COLUMN_LOG = [
     },
     {
         name: 'TimeBackupEnd',
-        label: 'Time End',
+        label: 'Time Check',
         width: 150,
     },
 ];
