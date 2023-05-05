@@ -57,7 +57,7 @@ const MENU_ITEMS: MenuItem[] = [
     {key: 'benh-vien', label: 'Danh sách bệnh viện', isTitle: true},
     {
         key: 'bv-e',
-        label: 'Bệnh viện E',
+        label: 'Bệnh viện E (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -78,7 +78,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-mediplus',
-        label: 'Bệnh viện MediPlus',
+        label: 'MediPlus (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -99,7 +99,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-xanhfon',
-        label: 'Bệnh viện Xanh Phôn',
+        label: 'BV Saint Paul (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -120,7 +120,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-daihoc-y',
-        label: 'Bệnh viện ĐH Y',
+        label: 'Viện ĐH Y (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -141,7 +141,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-bachmai',
-        label: 'Bệnh viện Bạch mai',
+        label: 'Bạch mai (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -162,7 +162,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-allen',
-        label: 'Doctor Allen',
+        label: 'Doctor Allen (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -183,7 +183,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-tttm',
-        label: 'Trung tâm tim mạch',
+        label: 'TTTM Viện E (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -202,30 +202,30 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
-    {
-        key: 'bv-dt',
-        label: 'Bệnh viện Đồng Tâm',
-        isTitle: false,
-        icon: 'globe',
-        collapsed: true,
-        children: [
-            {
-                key: 'bv-dt-info',
-                label: 'Thông tin server Đồng Tâm',
-                link: 'benh-vien/bv-dt/info',
-                parentKey: 'bv-dt',
-            },
-            {
-                key: 'bv-dt-database',
-                label: 'Database BVĐT',
-                link: 'benh-vien/bv-dt',
-                parentKey: 'bv-dt',
-            },
-        ],
-    },
+    // {
+    //     key: 'bv-dt',
+    //     label: 'Đồng Tâm (bỏ)',
+    //     isTitle: false,
+    //     icon: 'globe',
+    //     collapsed: true,
+    //     children: [
+    //         {
+    //             key: 'bv-dt-info',
+    //             label: 'Thông tin server Đồng Tâm',
+    //             link: 'benh-vien/bv-dt/info',
+    //             parentKey: 'bv-dt',
+    //         },
+    //         {
+    //             key: 'bv-dt-database',
+    //             label: 'Database BVĐT',
+    //             link: 'benh-vien/bv-dt',
+    //             parentKey: 'bv-dt',
+    //         },
+    //     ],
+    // },
     {
         key: 'bv-ytcc',
-        label: 'Bệnh viện YTCC',
+        label: 'YTCC(ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -246,7 +246,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-dkth',
-        label: 'Bệnh viện DKTH',
+        label: 'DK36 (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -273,7 +273,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-psta',
-        label: 'Bệnh viện PSTA',
+        label: 'PS Thiện An (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -294,7 +294,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-phoi',
-        label: 'Bệnh viện Phổi',
+        label: 'BV Phổi (ok)',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -313,7 +313,27 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
-
+    {
+        key: 'bv-vietmy',
+        label: 'BV Việt Mỹ (ok)',
+        isTitle: false,
+        icon: 'globe',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-vietmy-info',
+                label: 'Thông tin server Việt Mỹ',
+                link: 'benh-vien/bv-vietmy/info',
+                parentKey: 'bv-vietmy',
+            },
+            {
+                key: 'bv-vietmy-database',
+                label: 'Database Việt Mỹ',
+                link: 'benh-vien/bv-vietmy',
+                parentKey: 'bv-vietmy',
+            },
+        ],
+    },
     {
         key: 'bv-qy110',
         label: 'Bệnh viện QY 110',
@@ -395,48 +415,6 @@ const MENU_ITEMS: MenuItem[] = [
                 label: 'Database CTM',
                 link: 'benh-vien/bv-ctm',
                 parentKey: 'bv-ctm',
-            },
-        ],
-    },
-    {
-        key: 'bv-vietmy',
-        label: 'BV Việt Mỹ',
-        isTitle: false,
-        icon: 'globe',
-        collapsed: true,
-        children: [
-            {
-                key: 'bv-vietmy-info',
-                label: 'Thông tin server Việt Mỹ',
-                link: 'benh-vien/bv-vietmy/info',
-                parentKey: 'bv-vietmy',
-            },
-            {
-                key: 'bv-vietmy-database',
-                label: 'Database Việt Mỹ',
-                link: 'benh-vien/bv-vietmy',
-                parentKey: 'bv-vietmy',
-            },
-        ],
-    },
-    {
-        key: 'bv-dongtam',
-        label: 'BV Đồng Tâm',
-        isTitle: false,
-        icon: 'globe',
-        collapsed: true,
-        children: [
-            {
-                key: 'bv-dongtam-info',
-                label: 'Thông tin server Đồng Tâm',
-                link: 'benh-vien/bv-dongtam/info',
-                parentKey: 'bv-dongtam',
-            },
-            {
-                key: 'bv-dongtam-database',
-                label: 'Database Đồng Tâm',
-                link: 'benh-vien/bv-dongtam',
-                parentKey: 'bv-dongtam',
             },
         ],
     },

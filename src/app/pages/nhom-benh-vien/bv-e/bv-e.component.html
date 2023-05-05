@@ -52,7 +52,7 @@
                                 <small>Tên DB: {{ i.nameDatabase}}</small>
                             </td>
                             <td>
-                                <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)'">
+                                <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)' || i?.osSystems === '' ">
                                     <img width="85" src="./assets/images/centos.png" alt="centos">
                                 </ng-template>
                             </td>
