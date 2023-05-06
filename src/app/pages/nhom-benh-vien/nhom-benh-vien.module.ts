@@ -30,6 +30,7 @@ import { BvVietnhatComponent } from './bv-vietnhat/bv-vietnhat.component';
 import { BvVietnhatInfoComponent } from './bv-vietnhat/bv-vietnhat-info/bv-vietnhat-info.component';
 import { BvUbkhComponent } from './bv-ubkh/bv-ubkh.component';
 import { BvUbkhInfoComponent } from './bv-ubkh/bv-ubkh-info/bv-ubkh-info.component';
+import {ProfileModule} from "../extra-pages/profile/profile.module";
 
 
 @NgModule({
@@ -67,7 +68,8 @@ import { BvUbkhInfoComponent } from './bv-ubkh/bv-ubkh-info/bv-ubkh-info.compone
         UiModule,
         AdvancedTableModule,
         Select2Module,
-        PageTitleModule
+        PageTitleModule,
+        ProfileModule
     ]
 })
 export class NhomBenhVienModule {

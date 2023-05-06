@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BVE_VM, YTCC} from "../../../data/data-info";
+import {ProjectService} from "../../../../core/service/project.service";
 
 @Component({
     selector: 'app-bv-ytcc-info',
@@ -8,13 +9,27 @@ import {BVE_VM, YTCC} from "../../../data/data-info";
 })
 export class BvYtccInfoComponent implements OnInit {
 
-    constructor() {
+    serverPhysical: any
+    user: any
+    projectID = 5;
+    isDataLoaded: boolean = false;
+
+    constructor(
+        private ProjectService: ProjectService
+    ) {
+        this.getDetailCompany()
     }
 
-    user = YTCC;
-    serverPhysical = BVE_VM;
 
     ngOnInit(): void {
     }
 
+    getDetailCompany() {
+        this.ProjectService.getCompanyDetail(this.projectID).pipe().subscribe(res => {
+            this.user = res[0]
+            this.serverPhysical = res[0]['listPhysicalMachine']
+            console.log('res', res[0]['listPhysicalMachine'])
+            this.isDataLoaded = true;
+        })
+    }
 }

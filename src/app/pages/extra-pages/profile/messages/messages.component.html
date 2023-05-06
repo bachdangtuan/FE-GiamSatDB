@@ -17,10 +17,10 @@
     <ng-template #theContent>
         <tr *ngFor="let i of records">
             <td>
-                <span>{{i?.type_machine}}</span>
+                <span>{{i?.namePhysicalMachine}}</span>
             </td>
             <td>
-                <div *ngIf="i?.provider === 'dell'; else providerOther">
+                <div *ngIf="i?.type_machine === 'dell'; else providerOther">
                     <img src="./assets/images/Dell_Logo.png" alt="" width="50">
                 </div>
                 <ng-template #providerOther>
@@ -28,7 +28,7 @@
                 </ng-template>
             </td>
             <td>
-                <span>{{i?.ip}}</span>
+                <span>{{i?.ipadress}}</span>
             </td>
             <td>
                 <span>{{i?.service}}</span>

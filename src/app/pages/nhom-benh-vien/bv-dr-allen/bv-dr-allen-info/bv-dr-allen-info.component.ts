@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BV_Allen, BVE_VM} from "../../../data/data-info";
+import {ProjectService} from "../../../../core/service/project.service";
 
 @Component({
     selector: 'app-bv-dr-allen-info',
@@ -8,14 +9,28 @@ import {BV_Allen, BVE_VM} from "../../../data/data-info";
 })
 export class BvDrAllenInfoComponent implements OnInit {
 
-    constructor() {
+    serverPhysical: any
+    user: any
+    projectID = 7;
+    isDataLoaded: boolean = false;
+
+    constructor(
+        private ProjectService: ProjectService
+    ) {
+        this.getDetailCompany()
     }
 
-    user = BV_Allen
-    serverPhysical = BVE_VM;
 
     ngOnInit(): void {
     }
 
+    getDetailCompany() {
+        this.ProjectService.getCompanyDetail(this.projectID).pipe().subscribe(res => {
+            this.user = res[0]
+            this.serverPhysical = res[0]['listPhysicalMachine']
+            console.log('res', res[0]['listPhysicalMachine'])
+            this.isDataLoaded = true;
+        })
+    }
 
 }

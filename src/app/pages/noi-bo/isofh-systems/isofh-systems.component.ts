@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {ISOFH_INFO, ISOFH_VM} from "../../data/data-info";
+import {ProjectService} from "../../../core/service/project.service";
 
 @Component({
     selector: 'app-isofh-systems',
@@ -7,15 +8,28 @@ import {ISOFH_INFO, ISOFH_VM} from "../../data/data-info";
     styleUrls: ['./isofh-systems.component.scss']
 })
 export class IsofhSystemsComponent implements OnInit {
+    serverPhysical: any
+    user: any
+    projectID = 1;
+    isDataLoaded: boolean = false;
 
-    constructor() {
+    constructor(
+        private ProjectService: ProjectService
+    ) {
+        this.getDetailCompany()
     }
 
 
-    serverPhysical = ISOFH_VM
-    user = ISOFH_INFO
-
     ngOnInit(): void {
+    }
+
+    getDetailCompany() {
+        this.ProjectService.getCompanyDetail(this.projectID).pipe().subscribe(res => {
+            this.user = res[0]
+            this.serverPhysical = res[0]['listPhysicalMachine']
+            console.log('res', res[0]['listPhysicalMachine'])
+            this.isDataLoaded = true;
+        })
     }
 
 }

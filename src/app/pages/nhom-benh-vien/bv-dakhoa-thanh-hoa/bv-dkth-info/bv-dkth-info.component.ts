@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {BVE_VM, DKTH} from "../../../data/data-info";
+import {ProjectService} from "../../../../core/service/project.service";
 
 @Component({
     selector: 'app-bv-dkth-info',
@@ -8,15 +9,28 @@ import {BVE_VM, DKTH} from "../../../data/data-info";
 })
 export class BvDkthInfoComponent implements OnInit {
 
-    constructor() {
-    }
+    serverPhysical: any
+    user: any
+    projectID = 8;
+    isDataLoaded: boolean = false;
 
-    user = DKTH;
-    serverPhysical = BVE_VM;
+    constructor(
+        private ProjectService: ProjectService
+    ) {
+        this.getDetailCompany()
+    }
 
 
     ngOnInit(): void {
     }
 
+    getDetailCompany() {
+        this.ProjectService.getCompanyDetail(this.projectID).pipe().subscribe(res => {
+            this.user = res[0]
+            this.serverPhysical = res[0]['listPhysicalMachine']
+            console.log('res', res[0]['listPhysicalMachine'])
+            this.isDataLoaded = true;
+        })
+    }
 
 }
