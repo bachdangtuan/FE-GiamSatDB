@@ -42,7 +42,7 @@ export class JiraConfluenceComponent implements OnInit {
             hostName: 'isofh-db-jira-new-54',
             nameDatabase: 'conflu_test3',
             page: 1,
-            limit: 10,
+            limit: 6,
         });
     }
 
