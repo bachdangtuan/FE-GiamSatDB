@@ -1,47 +1,32 @@
-import { Component, OnInit } from '@angular/core';
-import { Title } from '@angular/platform-browser';
-import { ActivatedRoute } from '@angular/router';
-import { PROJECTACTIVITIES, PROJECTLIST } from '../shared/data';
-import { Project, ProjectActivity } from '../shared/projects.model';
+import {Component, OnInit} from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import {ActivatedRoute} from '@angular/router';
+import {PROJECTACTIVITIES, PROJECTLIST} from '../shared/data';
+import {Project, ProjectActivity} from '../shared/projects.model';
 
 @Component({
-  selector: 'app-project-details',
-  templateUrl: './details.component.html',
-  styleUrls: ['./details.component.scss']
+    selector: 'app-project-details',
+    templateUrl: './details.component.html',
+    styleUrls: ['./details.component.scss']
 })
 export class DetailsComponent implements OnInit {
 
-  selectedProject!: Project;
-  projectActivities: ProjectActivity[] = [];
+    selectedProject!: Project;
 
-  constructor (private route: ActivatedRoute, private titleService: Title) {
-    titleService.setTitle("Project Details | Shreyu - Responsive Angular and Bootstrap 5 Admin Dashboard Template");
-  }
-  projectId: any;
+    constructor(private route: ActivatedRoute, private titleService: Title) {
+        titleService.setTitle("Project Details | Shreyu - Responsive Angular and Bootstrap 5 Admin Dashboard Template");
+    }
 
-  ngOnInit(): void {
-    // this.route.queryParams.subscribe(params => {
-    //   this.projectId = params['id'];
-    // });
+    projectId: any;
 
-    this.route.queryParams.subscribe(params => {
-      this.projectId = params['id'];
-      console.log('params',this.projectId)
-      // if (params && params.hasOwnProperty('id')) {
-      //   this.selectedProject = PROJECTLIST.filter(x => String(x.id) === params['id'])[0];
-      // } else {
-      //   this.selectedProject = PROJECTLIST[0];
-      // }
-    });
+    ngOnInit(): void {
 
-    // this._fetchData();
-  }
+        this.route.queryParams.subscribe(params => {
+            this.projectId = params['id'];
+            console.log('params', this.projectId)
+        });
 
-  /**
-   * fetch data
-   */
-  _fetchData(): void {
-    this.projectActivities = PROJECTACTIVITIES;
-  }
+    }
+
 
 }
