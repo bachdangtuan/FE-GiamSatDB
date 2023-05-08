@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {ISOFH_INFO, ISOFH_VM} from "../../data/data-info";
 import {ProjectService} from "../../../core/service/project.service";
 
 @Component({

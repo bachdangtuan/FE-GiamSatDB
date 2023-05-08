@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {BV_XANHPHON, BVE_VM, XANH_PHON} from "../../../data/data-info";
 import {ProjectService} from "../../../../core/service/project.service";
 
 @Component({

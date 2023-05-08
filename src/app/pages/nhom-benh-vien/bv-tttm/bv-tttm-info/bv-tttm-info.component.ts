@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import {BVE_VM, TTTM_INFO} from "../../../data/data-info";
 import {ProjectService} from "../../../../core/service/project.service";
 
 @Component({
