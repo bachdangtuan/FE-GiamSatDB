@@ -20,8 +20,8 @@
                 <span>{{i?.namePhysicalMachine}}</span>
             </td>
             <td>
-                <div *ngIf="i?.type_machine === 'dell'; else providerOther">
-                    <img src="./assets/images/Dell_Logo.png" alt="" width="50">
+                <div *ngIf="i?.type_machine === 'fujitsu'; else providerOther">
+                    <img src="./assets/images/fujitsu.png" alt="" width="50">
                 </div>
                 <ng-template #providerOther>
                     <img src="./assets/images/hpe.png" alt="" width="50">
