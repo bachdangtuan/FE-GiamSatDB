@@ -31,6 +31,7 @@ import { BvVietnhatInfoComponent } from './bv-vietnhat/bv-vietnhat-info/bv-vietn
 import { BvUbkhComponent } from './bv-ubkh/bv-ubkh.component';
 import { BvUbkhInfoComponent } from './bv-ubkh/bv-ubkh-info/bv-ubkh-info.component';
 import {ProfileModule} from "../extra-pages/profile/profile.module";
+import { BvNdtpComponent } from './bv-ndtp/bv-ndtp.component';
 
 
 @NgModule({
@@ -60,6 +61,7 @@ import {ProfileModule} from "../extra-pages/profile/profile.module";
     BvVietnhatInfoComponent,
     BvUbkhComponent,
     BvUbkhInfoComponent,
+    BvNdtpComponent,
 
   ],
     imports: [

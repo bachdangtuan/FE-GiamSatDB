@@ -86,6 +86,10 @@ const routes: Routes = [
         path: 'bv-ubkh',
         loadChildren: () => import('./bv-ubkh/bv-ubkh.module').then(m => m.BvUbkhModule)
     },
+    {
+        path: 'bv-ndtp',
+        loadChildren: () => import('./bv-ndtp/bv-ndtp.module').then(m => m.BvNdtpModule)
+    },
 ];
 
 @NgModule({

@@ -77,6 +77,28 @@ const MENU_ITEMS: MenuItem[] = [
         ],
     },
     {
+        key: 'bv-ndtp',
+        label: 'Viện NĐTP (ok)',
+        isTitle: false,
+        icon: 'globe',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-ndtp-info',
+                label: 'Thông tin server NĐTP',
+                link: 'benh-vien/bv-ndtp/info',
+                parentKey: 'bv-ndtp',
+            },
+            {
+                key: 'bv-ndtp-database',
+                label: 'Database Prod NĐTP',
+                link: 'benh-vien/bv-ndtp',
+                parentKey: 'bv-ndtp',
+            },
+        ],
+    },
+
+    {
         key: 'bv-mediplus',
         label: 'MediPlus (ok)',
         isTitle: false,
