@@ -10,7 +10,7 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title border-bottom p-2 mb-0">Thông tin máy vật lý</h3>
+                <h3 class="card-title border-bottom p-2 mb-0">Thông tin máy Esxi IP: {{detailPhysicalMachine?.ipadress}}</h3>
                 <div class="row  border-bottom ">
                     <div class="col-xl-3 col-sm-6">
                         <!-- stat 1 -->
@@ -18,7 +18,7 @@
                             <i data-feather="codesandbox" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
                                 <span class="text-muted fs-13">Số máy ảo</span>
-                                <h4 class="mt-0 mb-0">210</h4>
+                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.listVirtualMachine.length}}</h4>
                             </div>
                         </div>
                     </div>
@@ -27,8 +27,8 @@
                         <div class="d-flex p-3">
                             <i data-feather="smartphone" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
-                                <span class="text-muted">RAM</span>
-                                <h4 class="mt-0 mb-0">121</h4>
+                                <span class="text-muted">Total RAM</span>
+                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.ram}}</h4>
                             </div>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                             <i data-feather="cpu" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
                                 <span class="text-muted">Total CPU</span>
-                                <h4 class="mt-0 mb-0">12</h4>
+                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.cpu.slice(0,8)}}</h4>
                             </div>
                         </div>
                     </div>
@@ -47,8 +47,8 @@
                         <div class="d-flex p-3">
                             <i data-feather="database" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
-                                <span class="text-muted">Total Disk</span>
-                                <h4 class="mt-0 mb-0">2500</h4>
+                                <span class="text-muted">Total Capacity Disk</span>
+                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.disk}}</h4>
                             </div>
                         </div>
                     </div>

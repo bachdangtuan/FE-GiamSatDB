@@ -3,6 +3,7 @@ import {Title} from '@angular/platform-browser';
 import {ActivatedRoute} from '@angular/router';
 import {PROJECTACTIVITIES, PROJECTLIST} from '../shared/data';
 import {Project, ProjectActivity} from '../shared/projects.model';
+import {PhysicalMachineService} from "../../../core/service/physicalmachine.service";
 
 @Component({
     selector: 'app-project-details',
@@ -13,20 +14,31 @@ export class DetailsComponent implements OnInit {
 
     selectedProject!: Project;
 
-    constructor(private route: ActivatedRoute, private titleService: Title) {
+    constructor(
+        private route: ActivatedRoute,
+        private titleService: Title,
+        private PhysicalMachineService: PhysicalMachineService
+    ) {
         titleService.setTitle("Project Details | Shreyu - Responsive Angular and Bootstrap 5 Admin Dashboard Template");
     }
 
     projectId: any;
+    detailPhysicalMachine: any;
 
     ngOnInit(): void {
-
         this.route.queryParams.subscribe(params => {
             this.projectId = params['id'];
             console.log('params', this.projectId)
-        });
-
+        })
+        this.getPhysicalMachine()
     }
 
+    getPhysicalMachine() {
+        this.PhysicalMachineService.getCompanyDetail(this.projectId).pipe().subscribe(res => {
+            this.detailPhysicalMachine = res[0]
+            console.log('res', res)
+            // this.isDataLoaded = true;
+        })
+    }
 
 }
