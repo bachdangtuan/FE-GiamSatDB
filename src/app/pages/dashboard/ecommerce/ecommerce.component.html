@@ -23,14 +23,7 @@
         <div class="card">
             <div class="card-body p-0">
                 <div class="p-3">
-                    <div class="float-end" ngbDropdown placement="bottom-end">
-                        <a ngbDropdownToggle class="arrow-none text-muted" id="ecommerceDropdown"
-                           href="javascript:void(0)" aria-expanded="false">
-                            <i class="uil uil-ellipsis-v"></i>
-                        </a>
-                    </div>
-
-                    <h5 class="card-title header-title mb-0">Thống kê</h5>
+                    <h5 class="card-title header-title mb-0">Thống kê Backup</h5>
                 </div>
 
                 <app-widget-overview *ngFor="let item of overviewData" [title]="item.title" [stats]="item.stats"

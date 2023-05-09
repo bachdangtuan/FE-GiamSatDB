@@ -41,18 +41,23 @@ const CHARTSTATISTICSDATA: ChartStatistics[] = [
 
 const OVERVIEWITEMS: OverviewItem[] = [
     {
-        title: 'Container',
-        stats: 121000,
+        title: 'Tổng số lần backup',
+        stats: 210,
         icon: 'users'
     },
     {
-        title: 'Total Product Views',
-        stats: 21000,
+        title: 'HĐH Ubuntu',
+        stats: 210,
         icon: 'image'
     },
     {
-        title: 'Revenue Per Visitor',
-        stats: '$21.5',
+        title: 'HĐH Centos',
+        stats: 100,
+        icon: 'image'
+    },
+    {
+        title: 'HĐH Khác',
+        stats: 20,
         icon: 'shopping-bag'
     }
 ];
