@@ -6,42 +6,42 @@ import { OrderItem } from "./ecommerce.model";
 
 const CHARTSTATISTICSDATA: ChartStatistics[] = [
     {
-        mainTitle: 'Today Revenue',
-        value: '$2100',
+        mainTitle: 'Số lượng dự án',
+        value: '23',
         subValue: 10.21,
         chartType: 'area',
         chartData: [25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54],
         chartColors: ['#5369f8'],
     },
     {
-        mainTitle: 'Product Sold',
-        value: 558,
+        mainTitle: 'Tổng số Esxi',
+        value: 38,
         subValue: 5.05,
         chartType: 'area',
         chartData: [25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54],
         chartColors: ['#f77e53'],
     },
     {
-        mainTitle: 'New Customers',
-        value: 65,
+        mainTitle: 'Số Lượng Máy Ảo',
+        value: 158,
+        subValue: 5.05,
+        chartType: 'area',
+        chartData: [25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54],
+        chartColors: ['#ffbe0b'],
+    },
+    {
+        mainTitle: 'Số lượng Container',
+        value: 465,
         subValue: 25.16,
         chartType: 'area',
         chartData: [25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54],
         chartColors: ['#43d39e'],
     },
-    {
-        mainTitle: 'New Visitors',
-        value: 958,
-        subValue: 5.05,
-        chartType: 'area',
-        chartData: [25, 66, 41, 85, 63, 25, 44, 12, 36, 9, 54],
-        chartColors: ['#ffbe0b'],
-    }
 ];
 
 const OVERVIEWITEMS: OverviewItem[] = [
     {
-        title: 'Total Visitors',
+        title: 'Container',
         stats: 121000,
         icon: 'users'
     },

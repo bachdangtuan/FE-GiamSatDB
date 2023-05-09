@@ -10,7 +10,7 @@
         <tr>
             <th *ngFor="let column of columns" [style.width.px]="column.width" class="text-capitalize">
                 {{column.label}}</th>
-            <th>Hành động</th>
+            <th>Chi Tiết</th>
         </tr>
     </ng-template>
 
@@ -31,7 +31,7 @@
                 <span>{{i?.ipadress}}</span>
             </td>
             <td>
-                <span>{{i?.service}}</span>
+                <span>{{i?.service.slice(0, 18)}}</span>
             </td>
             <td>
                 <span>{{i?.cpu}}</span>
@@ -40,7 +40,10 @@
                 <span>{{i?.ram}}</span>
             </td>
             <td>
-                <span>{{i?.disk}}</span>
+                <span *ngIf="i?.disk.length > 11; else FullDulieu">{{i?.disk.slice(0, 9) + '...'}}</span>
+                <ng-template #FullDulieu>
+                    <span>{{i?.disk}}</span>
+                </ng-template>
             </td>
             <td>
                 <div class="d-flex gap-1" style="cursor: pointer">

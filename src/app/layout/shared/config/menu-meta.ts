@@ -2,29 +2,29 @@ import {MenuItem} from '../models/menu.model';
 
 // menu items for vertcal and detached layout
 const MENU_ITEMS: MenuItem[] = [
-    // { key: 'dashboard', label: 'Nội bộ ISofH', isTitle: true },
-    // {
-    //     key: 'dashboard',
-    //     label: 'Thống kê',
-    //     isTitle: false,
-    //     icon: 'home',
-    //     collapsed: true,
-    //     badge: { variant: 'success', text: '02' },
-    //     children: [
-    //         {
-    //             key: 'ds-ecommerce',
-    //             label: 'Ecommerce',
-    //             link: '/dashboard/ecommerce',
-    //             parentKey: 'dashboard',
-    //         },
-    //         {
-    //             key: 'ds-analytics',
-    //             label: 'Analytics',
-    //             link: '/dashboard/analytics',
-    //             parentKey: 'dashboard',
-    //         }
-    //     ],
-    // },
+    { key: 'dashboard', label: 'Tổng Quan', isTitle: true },
+    {
+        key: 'dashboard',
+        label: 'Thống kê',
+        isTitle: false,
+        icon: 'home',
+        collapsed: true,
+        // badge: { variant: 'danger', text: '02' },
+        children: [
+            {
+                key: 'ds-ecommerce',
+                label: 'Tổng Quan Dự Án',
+                link: '/dashboard/tong-quan-du-an',
+                parentKey: 'dashboard',
+            },
+            // {
+            //     key: 'ds-analytics',
+            //     label: 'Analytics',
+            //     link: '/dashboard/analytics',
+            //     parentKey: 'dashboard',
+            // }
+        ],
+    },
 
     {key: 'noi-bo', label: 'Nội bộ ISofH', isTitle: true},
     {
@@ -32,6 +32,7 @@ const MENU_ITEMS: MenuItem[] = [
         label: 'Máy chủ nội bộ',
         isTitle: false,
         icon: 'home',
+        badge: { variant: 'primary', text: 'nội bộ' },
         collapsed: true,
         children: [
             {
@@ -56,8 +57,52 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {key: 'benh-vien', label: 'Danh sách bệnh viện', isTitle: true},
     {
+        key: 'bv-ubkh',
+        label: 'UB Khánh Hòa  ',
+        isTitle: false,
+        badge: { variant: 'success', text: 'mới' },
+        icon: 'globe',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-ubkh-info',
+                label: 'Thông tin server UBKH',
+                link: 'benh-vien/bv-ubkh/info',
+                parentKey: 'bv-ubkh',
+            },
+            {
+                key: 'bv-ubkh-database',
+                label: 'Database UBKH',
+                link: 'benh-vien/bv-ubkh',
+                parentKey: 'bv-ubkh',
+            },
+        ],
+    },
+    {
+        key: 'bv-ndtp',
+        label: 'Viện NĐTP  ',
+        isTitle: false,
+        icon: 'globe',
+        badge: { variant: 'success', text: 'mới' },
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-ndtp-info',
+                label: 'Thông tin server NĐTP',
+                link: 'benh-vien/bv-ndtp/info',
+                parentKey: 'bv-ndtp',
+            },
+            {
+                key: 'bv-ndtp-database',
+                label: 'Database Prod NĐTP',
+                link: 'benh-vien/bv-ndtp',
+                parentKey: 'bv-ndtp',
+            },
+        ],
+    },
+    {
         key: 'bv-e',
-        label: 'Bệnh viện E (ok)',
+        label: 'Bệnh viện E',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -77,30 +122,8 @@ const MENU_ITEMS: MenuItem[] = [
         ],
     },
     {
-        key: 'bv-ndtp',
-        label: 'Viện NĐTP (ok)',
-        isTitle: false,
-        icon: 'globe',
-        collapsed: true,
-        children: [
-            {
-                key: 'bv-ndtp-info',
-                label: 'Thông tin server NĐTP',
-                link: 'benh-vien/bv-ndtp/info',
-                parentKey: 'bv-ndtp',
-            },
-            {
-                key: 'bv-ndtp-database',
-                label: 'Database Prod NĐTP',
-                link: 'benh-vien/bv-ndtp',
-                parentKey: 'bv-ndtp',
-            },
-        ],
-    },
-
-    {
         key: 'bv-mediplus',
-        label: 'MediPlus (ok)',
+        label: 'MediPlus  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -121,7 +144,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-xanhfon',
-        label: 'BV Saint Paul (ok)',
+        label: 'BV Saint Paul  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -142,7 +165,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-daihoc-y',
-        label: 'Viện ĐH Y (ok)',
+        label: 'Viện ĐH Y  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -163,7 +186,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-bachmai',
-        label: 'Bạch mai (ok)',
+        label: 'Bạch mai  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -184,7 +207,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-allen',
-        label: 'Doctor Allen (ok)',
+        label: 'Doctor Allen  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -205,7 +228,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-tttm',
-        label: 'TTTM Viện E (ok)',
+        label: 'TTTM Viện E  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -247,7 +270,7 @@ const MENU_ITEMS: MenuItem[] = [
     // },
     {
         key: 'bv-ytcc',
-        label: 'YTCC(ok)',
+        label: 'YTCC ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -268,7 +291,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-dkth',
-        label: 'DK36 (ok)',
+        label: 'DK36  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -295,7 +318,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-psta',
-        label: 'PS Thiện An (ok)',
+        label: 'PS Thiện An  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -316,7 +339,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-phoi',
-        label: 'BV Phổi (ok)',
+        label: 'BV Phổi  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -337,7 +360,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-vietmy',
-        label: 'BV Việt Mỹ (ok)',
+        label: 'BV Việt Mỹ  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -358,7 +381,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-qy110',
-        label: 'Viện QY 110 (ok)',
+        label: 'Viện QY 110  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -399,29 +422,8 @@ const MENU_ITEMS: MenuItem[] = [
     //     ],
     // },
     {
-        key: 'bv-ubkh',
-        label: 'UB Khánh Hòa (ok)',
-        isTitle: false,
-        icon: 'globe',
-        collapsed: true,
-        children: [
-            {
-                key: 'bv-ubkh-info',
-                label: 'Thông tin server UBKH',
-                link: 'benh-vien/bv-ubkh/info',
-                parentKey: 'bv-ubkh',
-            },
-            {
-                key: 'bv-ubkh-database',
-                label: 'Database UBKH',
-                link: 'benh-vien/bv-ubkh',
-                parentKey: 'bv-ubkh',
-            },
-        ],
-    },
-    {
         key: 'bv-vietnhat',
-        label: 'BV Việt Nhật (ok)',
+        label: 'BV Việt Nhật  ',
         isTitle: false,
         icon: 'globe',
         collapsed: true,
@@ -446,6 +448,7 @@ const MENU_ITEMS: MenuItem[] = [
         isTitle: false,
         icon: 'globe',
         collapsed: true,
+        badge: { variant: 'danger', text: 'non Pass' },
         children: [
             {
                 key: 'bv-ctm-info',
@@ -466,6 +469,7 @@ const MENU_ITEMS: MenuItem[] = [
         label: 'MyRehab',
         isTitle: false,
         icon: 'globe',
+        badge: { variant: 'danger', text: 'jump' },
         collapsed: true,
         children: [
             {
@@ -484,8 +488,9 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-thaihoa',
-        label: 'Thái Hòa (ko VPN)',
+        label: 'Thái Hòa',
         isTitle: false,
+        badge: { variant: 'danger', text: 'no VPN' },
         icon: 'globe',
         collapsed: true,
         children: [
@@ -856,259 +861,259 @@ const MENU_ITEMS: MenuItem[] = [
 
 ];
 
-// menu items for two column menu layout 
+// menu items for two column menu layout
 const TWO_COl_MENU_ITEMS: MenuItem[] = [
-    {
-        key: 'dashboard',
-        icon: 'home',
-        label: 'Dashboard',
-        isTitle: true,
-        children: [
-            {
-                key: 'ds-ecommerce',
-                label: 'Ecommerce',
-                link: '/dashboard/ecommerce',
-                parentKey: 'dashboard',
-            },
-            {
-                key: 'ds-analytics',
-                label: 'Analytics',
-                link: '/dashboard/analytics',
-                parentKey: 'dashboard',
-            }
-        ],
-    },
-    {
-        key: 'apps',
-        icon: 'grid',
-        label: 'Apps',
-        isTitle: true,
-        children: [
-            {
-                key: 'apps-calendar',
-                label: 'Calendar',
-                isTitle: false,
-                icon: 'calendar',
-                link: '/apps/calendar',
-                parentKey: 'apps',
-            },
-            {
-                key: 'apps-chat',
-                label: 'Chat',
-                isTitle: false,
-                icon: 'message-square',
-                link: '/apps/chat',
-                parentKey: 'apps',
-            },
-            {
-                key: 'apps-eglobe',
-                label: 'Eglobe',
-                isTitle: false,
-                icon: 'globe',
-                parentKey: 'apps',
-                collapsed: true,
-                children: [
-                    {
-                        key: 'eglobe-inbox',
-                        label: 'Inbox',
-                        link: '/apps/eglobe/inbox',
-                        parentKey: 'apps-eglobe',
-                    },
-                    {
-                        key: 'eglobe-read-eglobe',
-                        label: 'Read Eglobe',
-                        link: '/apps/eglobe/details',
-                        parentKey: 'apps-eglobe',
-                    },
-                    {
-                        key: 'eglobe-compose-eglobe',
-                        label: 'Compose Eglobe',
-                        link: '/apps/eglobe/compose',
-                        parentKey: 'apps-eglobe',
-                    },
-                ],
-            },
-            {
-                key: 'apps-projects',
-                label: 'Projects',
-                isTitle: false,
-                icon: 'briefcase',
-                parentKey: 'apps',
-                collapsed: true,
-                children: [
-                    {key: 'project-list', label: 'List', link: '/apps/projects/list', parentKey: 'apps-projects'},
-                    {
-                        key: 'project-details',
-                        label: 'Detail',
-                        link: '/apps/projects/details',
-                        parentKey: 'apps-projects',
-                    }
-                ],
-            },
-            {
-                key: 'apps-tasks',
-                label: 'Tasks',
-                isTitle: false,
-                icon: 'clipboard',
-                parentKey: 'apps',
-                collapsed: true,
-                children: [
-                    {key: 'task-list', label: 'List', link: '/apps/tasks/list', parentKey: 'apps-tasks'},
-                    {key: 'task-kanban', label: 'Kanban Board', link: '/apps/tasks/kanban', parentKey: 'apps-tasks'},
-                ],
-            },
-            {
-                key: 'apps-file-manager',
-                label: 'File Manager',
-                isTitle: false,
-                icon: 'folder-plus',
-                link: '/apps/file-manager',
-                parentKey: 'apps',
-            },
-        ],
-    },
-    {
-        key: 'extra-pages',
-        icon: 'file-text',
-        label: 'Pages',
-        isTitle: true,
-        children: [
-            {key: 'page-starter', label: 'Starter', link: '/pages/starter', parentKey: 'extra-pages'},
-            {key: 'page-profile', label: 'Profile', link: '/pages/profile', parentKey: 'extra-pages'},
-            {key: 'page-activity', label: 'Activity', link: '/pages/activity', parentKey: 'extra-pages'},
-            {key: 'page-invoice', label: 'Invoice', link: '/pages/invoice', parentKey: 'extra-pages'},
-            {key: 'page-pricing', label: 'Pricing', link: '/pages/pricing', parentKey: 'extra-pages'},
-            {
-                key: 'page-maintenance',
-                label: 'Maintenance',
-
-                link: '/maintenance',
-                parentKey: 'extra-pages',
-            },
-            {key: 'page-error-404', label: 'Error - 404', link: '/error-404', parentKey: 'extra-pages'},
-            {key: 'page-error-500', label: 'Error - 500', link: '/error-500', parentKey: 'extra-pages'},
-        ],
-    },
-    {
-        key: 'components',
-        icon: 'package',
-        label: 'Components',
-        isTitle: true,
-        children: [
-            {
-                key: 'ui-elements',
-                label: 'UI Elements',
-                isTitle: false,
-                icon: 'package',
-                link: '/ui-element',
-                parentKey: 'components'
-            },
-            {
-                key: 'icons',
-                label: 'Icons',
-                isTitle: false,
-                icon: 'cpu',
-                parentKey: 'components',
-                collapsed: true,
-                children: [
-                    {key: 'icon-unicons', label: 'Unicons', link: '/icons/unicon', parentKey: 'icons'},
-                    {key: 'icon-feather', label: 'Feather', link: '/icons/feather', parentKey: 'icons'},
-                    {key: 'icon-bootstrap', label: 'Bootstrap', link: '/icons/bootstrap', parentKey: 'icons'},
-                ],
-            },
-            {
-                key: 'charts',
-                label: 'Charts',
-                isTitle: false,
-                icon: 'bar-chart-2',
-                link: '/charts',
-                parentKey: 'components'
-            },
-            {
-                key: 'forms',
-                label: 'Forms',
-                isTitle: false,
-                icon: 'bookmark',
-                parentKey: 'components',
-                collapsed: true,
-                children: [
-                    {key: 'form-basic', label: 'Basic Elements', link: '/forms/basic', parentKey: 'forms'},
-                    {key: 'form-advanced', label: 'Advanced', link: '/forms/advanced', parentKey: 'forms'},
-                    {key: 'form-validation', label: 'Validation', link: '/forms/validation', parentKey: 'forms'},
-                    {key: 'form-wizard', label: 'Wizard', link: '/forms/wizard', parentKey: 'forms'},
-                    {key: 'form-editors', label: 'Editors', link: '/forms/editors', parentKey: 'forms'},
-                    {key: 'form-upload', label: 'File Uploads', link: '/forms/upload', parentKey: 'forms'}
-                ],
-            },
-            {
-                key: 'tables',
-                label: 'Tables',
-                isTitle: false,
-                icon: 'grid',
-                parentKey: 'components',
-                collapsed: true,
-                children: [
-                    {key: 'table-basic', label: 'Basic', link: '/tables/basic', parentKey: 'tables'},
-                    {key: 'table-advanced', label: 'Advanced Tables', link: '/tables/advanced', parentKey: 'tables'},
-                ],
-            },
-            {
-                key: 'maps',
-                label: 'Maps',
-                isTitle: false,
-                icon: 'map',
-                parentKey: 'components',
-                collapsed: true,
-                children: [
-                    {key: 'maps-googlemaps', label: 'Google Maps', link: '/maps/googlemaps', parentKey: 'maps'},
-                    {key: 'maps-vectormaps', label: 'Vector Maps', link: '/maps/vectormaps', parentKey: 'maps'},
-                ],
-            },
-            {
-                key: 'menu-levels',
-                label: 'Menu Levels',
-                isTitle: false,
-                icon: 'share-2',
-                parentKey: 'components',
-                collapsed: true,
-                children: [
-                    {
-                        key: 'menu-levels-1-1',
-                        label: 'Level 1.1',
-                        link: '/',
-                        parentKey: 'menu-levels',
-                        collapsed: true,
-                        children: [
-                            {
-                                key: 'menu-levels-2-1',
-                                label: 'Level 2.1',
-                                link: '/',
-                                parentKey: 'menu-levels-1-1',
-                                collapsed: true,
-                                children: [
-                                    {
-                                        key: 'menu-levels-3-1',
-                                        label: 'Level 3.1',
-                                        link: '/',
-                                        parentKey: 'menu-levels-2-1',
-                                    },
-                                    {
-                                        key: 'menu-levels-3-2',
-                                        label: 'Level 3.2',
-                                        link: '/',
-                                        parentKey: 'menu-levels-2-1',
-                                    },
-                                ],
-                            },
-                            {key: 'menu-levels-2-2', label: 'Level 2.2', link: '/', parentKey: 'menu-levels-1-1'},
-                        ],
-                    },
-                    {key: 'menu-levels-1-2', label: 'Level 1.2', link: '/', parentKey: 'menu-levels'},
-                ],
-            },
-        ],
-    },
-    {key: 'widgets', label: 'Widgets', isTitle: false, icon: 'gift', link: '/widgets'},
+    // {
+    //     key: 'dashboard',
+    //     icon: 'home',
+    //     label: 'Dashboard',
+    //     isTitle: true,
+    //     children: [
+    //         {
+    //             key: 'ds-ecommerce',
+    //             label: 'Ecommerce',
+    //             link: '/dashboard/ecommerce',
+    //             parentKey: 'dashboard',
+    //         },
+    //         {
+    //             key: 'ds-analytics',
+    //             label: 'Analytics',
+    //             link: '/dashboard/analytics',
+    //             parentKey: 'dashboard',
+    //         }
+    //     ],
+    // },
+    // {
+    //     key: 'apps',
+    //     icon: 'grid',
+    //     label: 'Apps',
+    //     isTitle: true,
+    //     children: [
+    //         {
+    //             key: 'apps-calendar',
+    //             label: 'Calendar',
+    //             isTitle: false,
+    //             icon: 'calendar',
+    //             link: '/apps/calendar',
+    //             parentKey: 'apps',
+    //         },
+    //         {
+    //             key: 'apps-chat',
+    //             label: 'Chat',
+    //             isTitle: false,
+    //             icon: 'message-square',
+    //             link: '/apps/chat',
+    //             parentKey: 'apps',
+    //         },
+    //         {
+    //             key: 'apps-eglobe',
+    //             label: 'Eglobe',
+    //             isTitle: false,
+    //             icon: 'globe',
+    //             parentKey: 'apps',
+    //             collapsed: true,
+    //             children: [
+    //                 {
+    //                     key: 'eglobe-inbox',
+    //                     label: 'Inbox',
+    //                     link: '/apps/eglobe/inbox',
+    //                     parentKey: 'apps-eglobe',
+    //                 },
+    //                 {
+    //                     key: 'eglobe-read-eglobe',
+    //                     label: 'Read Eglobe',
+    //                     link: '/apps/eglobe/details',
+    //                     parentKey: 'apps-eglobe',
+    //                 },
+    //                 {
+    //                     key: 'eglobe-compose-eglobe',
+    //                     label: 'Compose Eglobe',
+    //                     link: '/apps/eglobe/compose',
+    //                     parentKey: 'apps-eglobe',
+    //                 },
+    //             ],
+    //         },
+    //         {
+    //             key: 'apps-projects',
+    //             label: 'Projects',
+    //             isTitle: false,
+    //             icon: 'briefcase',
+    //             parentKey: 'apps',
+    //             collapsed: true,
+    //             children: [
+    //                 {key: 'project-list', label: 'List', link: '/apps/projects/list', parentKey: 'apps-projects'},
+    //                 {
+    //                     key: 'project-details',
+    //                     label: 'Detail',
+    //                     link: '/apps/projects/details',
+    //                     parentKey: 'apps-projects',
+    //                 }
+    //             ],
+    //         },
+    //         {
+    //             key: 'apps-tasks',
+    //             label: 'Tasks',
+    //             isTitle: false,
+    //             icon: 'clipboard',
+    //             parentKey: 'apps',
+    //             collapsed: true,
+    //             children: [
+    //                 {key: 'task-list', label: 'List', link: '/apps/tasks/list', parentKey: 'apps-tasks'},
+    //                 {key: 'task-kanban', label: 'Kanban Board', link: '/apps/tasks/kanban', parentKey: 'apps-tasks'},
+    //             ],
+    //         },
+    //         {
+    //             key: 'apps-file-manager',
+    //             label: 'File Manager',
+    //             isTitle: false,
+    //             icon: 'folder-plus',
+    //             link: '/apps/file-manager',
+    //             parentKey: 'apps',
+    //         },
+    //     ],
+    // },
+    // {
+    //     key: 'extra-pages',
+    //     icon: 'file-text',
+    //     label: 'Pages',
+    //     isTitle: true,
+    //     children: [
+    //         {key: 'page-starter', label: 'Starter', link: '/pages/starter', parentKey: 'extra-pages'},
+    //         {key: 'page-profile', label: 'Profile', link: '/pages/profile', parentKey: 'extra-pages'},
+    //         {key: 'page-activity', label: 'Activity', link: '/pages/activity', parentKey: 'extra-pages'},
+    //         {key: 'page-invoice', label: 'Invoice', link: '/pages/invoice', parentKey: 'extra-pages'},
+    //         {key: 'page-pricing', label: 'Pricing', link: '/pages/pricing', parentKey: 'extra-pages'},
+    //         {
+    //             key: 'page-maintenance',
+    //             label: 'Maintenance',
+    //
+    //             link: '/maintenance',
+    //             parentKey: 'extra-pages',
+    //         },
+    //         {key: 'page-error-404', label: 'Error - 404', link: '/error-404', parentKey: 'extra-pages'},
+    //         {key: 'page-error-500', label: 'Error - 500', link: '/error-500', parentKey: 'extra-pages'},
+    //     ],
+    // },
+    // {
+    //     key: 'components',
+    //     icon: 'package',
+    //     label: 'Components',
+    //     isTitle: true,
+    //     children: [
+    //         {
+    //             key: 'ui-elements',
+    //             label: 'UI Elements',
+    //             isTitle: false,
+    //             icon: 'package',
+    //             link: '/ui-element',
+    //             parentKey: 'components'
+    //         },
+    //         {
+    //             key: 'icons',
+    //             label: 'Icons',
+    //             isTitle: false,
+    //             icon: 'cpu',
+    //             parentKey: 'components',
+    //             collapsed: true,
+    //             children: [
+    //                 {key: 'icon-unicons', label: 'Unicons', link: '/icons/unicon', parentKey: 'icons'},
+    //                 {key: 'icon-feather', label: 'Feather', link: '/icons/feather', parentKey: 'icons'},
+    //                 {key: 'icon-bootstrap', label: 'Bootstrap', link: '/icons/bootstrap', parentKey: 'icons'},
+    //             ],
+    //         },
+    //         {
+    //             key: 'charts',
+    //             label: 'Charts',
+    //             isTitle: false,
+    //             icon: 'bar-chart-2',
+    //             link: '/charts',
+    //             parentKey: 'components'
+    //         },
+    //         {
+    //             key: 'forms',
+    //             label: 'Forms',
+    //             isTitle: false,
+    //             icon: 'bookmark',
+    //             parentKey: 'components',
+    //             collapsed: true,
+    //             children: [
+    //                 {key: 'form-basic', label: 'Basic Elements', link: '/forms/basic', parentKey: 'forms'},
+    //                 {key: 'form-advanced', label: 'Advanced', link: '/forms/advanced', parentKey: 'forms'},
+    //                 {key: 'form-validation', label: 'Validation', link: '/forms/validation', parentKey: 'forms'},
+    //                 {key: 'form-wizard', label: 'Wizard', link: '/forms/wizard', parentKey: 'forms'},
+    //                 {key: 'form-editors', label: 'Editors', link: '/forms/editors', parentKey: 'forms'},
+    //                 {key: 'form-upload', label: 'File Uploads', link: '/forms/upload', parentKey: 'forms'}
+    //             ],
+    //         },
+    //         {
+    //             key: 'tables',
+    //             label: 'Tables',
+    //             isTitle: false,
+    //             icon: 'grid',
+    //             parentKey: 'components',
+    //             collapsed: true,
+    //             children: [
+    //                 {key: 'table-basic', label: 'Basic', link: '/tables/basic', parentKey: 'tables'},
+    //                 {key: 'table-advanced', label: 'Advanced Tables', link: '/tables/advanced', parentKey: 'tables'},
+    //             ],
+    //         },
+    //         {
+    //             key: 'maps',
+    //             label: 'Maps',
+    //             isTitle: false,
+    //             icon: 'map',
+    //             parentKey: 'components',
+    //             collapsed: true,
+    //             children: [
+    //                 {key: 'maps-googlemaps', label: 'Google Maps', link: '/maps/googlemaps', parentKey: 'maps'},
+    //                 {key: 'maps-vectormaps', label: 'Vector Maps', link: '/maps/vectormaps', parentKey: 'maps'},
+    //             ],
+    //         },
+    //         {
+    //             key: 'menu-levels',
+    //             label: 'Menu Levels',
+    //             isTitle: false,
+    //             icon: 'share-2',
+    //             parentKey: 'components',
+    //             collapsed: true,
+    //             children: [
+    //                 {
+    //                     key: 'menu-levels-1-1',
+    //                     label: 'Level 1.1',
+    //                     link: '/',
+    //                     parentKey: 'menu-levels',
+    //                     collapsed: true,
+    //                     children: [
+    //                         {
+    //                             key: 'menu-levels-2-1',
+    //                             label: 'Level 2.1',
+    //                             link: '/',
+    //                             parentKey: 'menu-levels-1-1',
+    //                             collapsed: true,
+    //                             children: [
+    //                                 {
+    //                                     key: 'menu-levels-3-1',
+    //                                     label: 'Level 3.1',
+    //                                     link: '/',
+    //                                     parentKey: 'menu-levels-2-1',
+    //                                 },
+    //                                 {
+    //                                     key: 'menu-levels-3-2',
+    //                                     label: 'Level 3.2',
+    //                                     link: '/',
+    //                                     parentKey: 'menu-levels-2-1',
+    //                                 },
+    //                             ],
+    //                         },
+    //                         {key: 'menu-levels-2-2', label: 'Level 2.2', link: '/', parentKey: 'menu-levels-1-1'},
+    //                     ],
+    //                 },
+    //                 {key: 'menu-levels-1-2', label: 'Level 1.2', link: '/', parentKey: 'menu-levels'},
+    //             ],
+    //         },
+    //     ],
+    // },
+    // {key: 'widgets', label: 'Widgets', isTitle: false, icon: 'gift', link: '/widgets'},
 ];
 
 // menu items for horizontal layout

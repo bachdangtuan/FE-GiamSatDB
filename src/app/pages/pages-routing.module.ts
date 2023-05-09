@@ -22,10 +22,10 @@ const routes: Routes = [
     //     redirectTo: 'dashboard',
     //     pathMatch: 'full'
     // },
-    // {
-    //     path: 'dashboard',
-    //     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
-    // },
+    {
+        path: 'dashboard',
+        loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
+    },
     // {
     //     path: 'widgets',
     //     loadChildren: () => import('./widgets/widgets.module').then(m => m.WidgetsModule)
