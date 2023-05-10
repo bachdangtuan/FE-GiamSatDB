@@ -29,10 +29,10 @@ const routes: Routes = [
       }
     ]
   },
-  // { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
-  // { path: 'maintenance', loadChildren: () => import('./pages/extra-pages/maintenance/maintenance.module').then(m => m.MaintenanceModule) },
-  // { path: 'error-404', loadChildren: () => import('./pages/extra-pages/error404/error404.module').then(m => m.Error404Module) },
-  // { path: 'error-500', loadChildren: () => import('./pages/extra-pages/error500/error500.module').then(m => m.Error500Module) },
+  { path: 'auth', loadChildren: () => import('./auth/auth.module').then(m => m.AuthModule) },
+  { path: 'maintenance', loadChildren: () => import('./pages/extra-pages/maintenance/maintenance.module').then(m => m.MaintenanceModule) },
+  { path: 'error-404', loadChildren: () => import('./pages/extra-pages/error404/error404.module').then(m => m.Error404Module) },
+  { path: 'error-500', loadChildren: () => import('./pages/extra-pages/error500/error500.module').then(m => m.Error500Module) },
   // { path: 'landing', loadChildren: () => import('./pages/landing-page/landing-page.module').then(m => m.LandingPageModule) },
 
 ];

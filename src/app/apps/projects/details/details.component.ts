@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
-import {ActivatedRoute} from '@angular/router';
+import {ActivatedRoute, Router} from '@angular/router';
 import {PROJECTACTIVITIES, PROJECTLIST} from '../shared/data';
 import {Project, ProjectActivity} from '../shared/projects.model';
 import {PhysicalMachineService} from "../../../core/service/physicalmachine.service";
@@ -15,6 +15,7 @@ export class DetailsComponent implements OnInit {
     selectedProject!: Project;
 
     constructor(
+        private router: Router,
         private route: ActivatedRoute,
         private titleService: Title,
         private PhysicalMachineService: PhysicalMachineService
@@ -24,6 +25,9 @@ export class DetailsComponent implements OnInit {
 
     projectId: any;
     detailPhysicalMachine: any;
+    listVirtualMachine: any;
+    showListContainer: any;
+    idVirtualMachine: any;
 
     ngOnInit(): void {
         this.route.queryParams.subscribe(params => {
@@ -36,9 +40,16 @@ export class DetailsComponent implements OnInit {
     getPhysicalMachine() {
         this.PhysicalMachineService.getCompanyDetail(this.projectId).pipe().subscribe(res => {
             this.detailPhysicalMachine = res[0]
-            console.log('res', res)
+            this.listVirtualMachine = res[0].listVirtualMachine.filter((vm: any, index: any, self: any) =>
+                index === self.findIndex((v: any) => v.nameVirtualMachine === vm.nameVirtualMachine)
+            );
+            console.log('res', this.listVirtualMachine)
             // this.isDataLoaded = true;
         })
     }
 
+    showDetailVM(id: any) {
+        this.showListContainer = true;
+        this.idVirtualMachine = id
+    }
 }

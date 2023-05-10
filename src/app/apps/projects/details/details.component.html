@@ -10,22 +10,25 @@
     <div class="col-xl-12">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title border-bottom p-2 mb-0">Thông tin máy Esxi IP: {{detailPhysicalMachine?.ipadress}}</h3>
+                <h3 class="card-title border-bottom p-2 mb-0">Thông tin máy Esxi
+                    IP: {{detailPhysicalMachine?.ipadress}}</h3>
                 <div class="row  border-bottom ">
                     <div class="col-xl-3 col-sm-6">
                         <!-- stat 1 -->
                         <div class="d-flex p-3">
-                            <i data-feather="codesandbox" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
+                            <i data-feather="codesandbox" appFeatherIcon
+                               class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
                                 <span class="text-muted fs-13">Số máy ảo</span>
-                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.listVirtualMachine.length}}</h4>
+                                <h4 class="mt-0 mb-0">{{listVirtualMachine?.length}}</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
                         <!-- stat 2 -->
                         <div class="d-flex p-3">
-                            <i data-feather="smartphone" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
+                            <i data-feather="smartphone" appFeatherIcon
+                               class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
                                 <span class="text-muted">Total RAM</span>
                                 <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.ram}}</h4>
@@ -38,14 +41,15 @@
                             <i data-feather="cpu" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
                                 <span class="text-muted">Total CPU</span>
-                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.cpu.slice(0,8)}}</h4>
+                                <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.cpu.slice(0, 8)}}</h4>
                             </div>
                         </div>
                     </div>
                     <div class="col-xl-3 col-sm-6">
                         <!-- stat 3 -->
                         <div class="d-flex p-3">
-                            <i data-feather="database" appFeatherIcon class="align-self-center icon-dual icon-lg me-4"></i>
+                            <i data-feather="database" appFeatherIcon
+                               class="align-self-center icon-dual icon-lg me-4"></i>
                             <div class="flex-grow-1">
                                 <span class="text-muted">Total Capacity Disk</span>
                                 <h4 class="mt-0 mb-0">{{detailPhysicalMachine?.disk}}</h4>
@@ -56,15 +60,16 @@
                 <div class="">
                     <h3 class="card-title  p-2 mb-0">Danh sách máy ảo</h3>
                     <div class="row mt-1">
-                        <div class="col-xl-2 col-lg-2">
+                        <div *ngFor="let i of listVirtualMachine" (click)="showDetailVM(i?.id)"
+                             class="col-xl-2 col-lg-2">
                             <div class="card border customize-detail-component" style="cursor: pointer">
                                 <div class="card-body">
                                     <div class="badge bg-success float-end">Đang hoạt động</div>
-                                    <p class="text-success text-uppercase fs-12 mb-1">Máy ảo</p>
-                                    <h5><a href="#" class="text-dark">Tên máy ảo</a></h5>
-                                    <p class="text-muted mb-1">
-                                        Địa chỉ IP: 10.0.0.210
-                                    </p>
+                                    <img width="60" src="assets/images/esxi.png" alt="exi">
+                                    <h5>Tên: {{i?.nameVirtualMachine}}</h5>
+                                    <h6 class="text-muted">
+                                        Địa chỉ IP: {{i?.ipaddress}}
+                                    </h6>
                                 </div>
                             </div>
                         </div>
@@ -72,7 +77,20 @@
                 </div>
             </div>
         </div>
-
+        <ng-template [ngIf]="showListContainer">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title  p-2 mb-0">Danh sách Container</h3>
+                    <div class="d-flex">
+                        <div *ngFor="let i of [1,2,3,4,5]">
+                            <div>
+                                <img width="60" src="assets/images/container.png" alt="exi">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
     </div>
 </div>
 
