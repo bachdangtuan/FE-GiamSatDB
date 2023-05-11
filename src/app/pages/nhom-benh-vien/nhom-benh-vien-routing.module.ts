@@ -90,6 +90,10 @@ const routes: Routes = [
         path: 'bv-ndtp',
         loadChildren: () => import('./bv-ndtp/bv-ndtp.module').then(m => m.BvNdtpModule)
     },
+    {
+        path: 'bv-pk40',
+        loadChildren: () => import('./bv-pk40/bv-pk40.module').then(m => m.BvPk40Module)
+    },
 ];
 
 @NgModule({

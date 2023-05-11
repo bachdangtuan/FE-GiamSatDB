@@ -32,6 +32,8 @@ import { BvUbkhComponent } from './bv-ubkh/bv-ubkh.component';
 import { BvUbkhInfoComponent } from './bv-ubkh/bv-ubkh-info/bv-ubkh-info.component';
 import {ProfileModule} from "../extra-pages/profile/profile.module";
 import { BvNdtpComponent } from './bv-ndtp/bv-ndtp.component';
+import { BvPk40Component } from './bv-pk40/bv-pk40.component';
+import { BvPk40InfoComponent } from './bv-pk40/bv-pk40-info/bv-pk40-info.component';
 
 
 @NgModule({
@@ -62,6 +64,8 @@ import { BvNdtpComponent } from './bv-ndtp/bv-ndtp.component';
     BvUbkhComponent,
     BvUbkhInfoComponent,
     BvNdtpComponent,
+    BvPk40Component,
+    BvPk40InfoComponent,
 
   ],
     imports: [

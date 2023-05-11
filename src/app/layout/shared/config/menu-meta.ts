@@ -57,6 +57,28 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {key: 'benh-vien', label: 'Danh sách bệnh viện', isTitle: true},
     {
+        key: 'bv-pk40',
+        label: 'Phòng Khám 4.0  ',
+        isTitle: false,
+        badge: { variant: 'success', text: 'mới' },
+        icon: 'globe',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-pk40-info',
+                label: 'Thông tin server UBKH',
+                link: 'benh-vien/bv-pk40/info',
+                parentKey: 'bv-pk40',
+            },
+            {
+                key: 'bv-pk40-database',
+                label: 'Database UBKH',
+                link: 'benh-vien/bv-pk40',
+                parentKey: 'bv-pk40',
+            },
+        ],
+    },
+    {
         key: 'bv-ubkh',
         label: 'UB Khánh Hòa  ',
         isTitle: false,
