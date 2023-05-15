@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {COLUMN_MONITOR} from "../../../core/constants/common";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     selector: 'app-project-list',
@@ -10,7 +11,11 @@ import {COLUMN_MONITOR} from "../../../core/constants/common";
 export class ListComponent implements OnInit {
     columns: any[] = [];
 
-    constructor(private titleService: Title) {
+
+    constructor(
+        private titleService: Title,
+        private route: ActivatedRoute,
+    ) {
         titleService.setTitle("List Thông tin | Hệ thống quản lý máy chủ dự án");
     }
 
@@ -21,7 +26,12 @@ export class ListComponent implements OnInit {
 
     ngOnInit(): void {
         this.initTableCofig()
+        this.getCompanyList()
     }
 
+    getCompanyList() {
+        const params$ = this.route.queryParams;
+        console.log('params$', params$)
+    }
 
 }
