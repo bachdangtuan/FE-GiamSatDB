@@ -95,6 +95,11 @@ export const COLUMN_MONITOR=[
         label: '% disk sử dụng',
         width: 150,
     },
+    {
+        name: 'date',
+        label: 'Ngày check',
+        width: 150,
+    },
 ]
 
 
