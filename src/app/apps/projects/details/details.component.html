@@ -71,7 +71,7 @@
                                         Địa chỉ IP: {{i?.ipaddress}}
                                     </h6>
                                     <div class="d-flex gap-1">
-                                        <button class="btn btn-primary">
+                                        <button class="btn btn-primary" (click)="showInfoVM(i?.nameVirtualMachine)">
                                             Monitor
                                         </button>
                                         <button (click)="showDetailVM(i?.id)" class="btn text-info btn-soft-info">

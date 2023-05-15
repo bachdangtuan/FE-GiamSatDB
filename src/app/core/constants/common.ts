@@ -49,6 +49,54 @@ export const COLUMN_LOG = [
     },
 ];
 
+export const COLUMN_MONITOR=[
+    {
+        name: 'name',
+        label: 'Tên Máy Ảo',
+        width: 250,
+    },
+    {
+        name: 'ipaddress',
+        label: 'Địa chỉ IP',
+        width: 150,
+    },
+    {
+        name: 'cpu',
+        label: 'CPU sử dụng',
+        width: 150,
+    },
+    {
+        name: 'ram',
+        label: 'Total RAM',
+        width: 150,
+    },
+    {
+        name: 'ramused',
+        label: 'Used RAM',
+        width: 150,
+    },
+    {
+        name: 'ramphantram',
+        label: '% RAM sử dụng',
+        width: 150,
+    },
+    {
+        name: 'disk',
+        label: 'Khối lượng ổ cứng',
+        width: 150,
+    },
+    {
+        name: 'diskused',
+        label: 'Khối lượng sử dụng',
+        width: 150,
+    },
+    {
+        name: 'diskused',
+        label: '% disk sử dụng',
+        width: 150,
+    },
+]
+
 
 export const COLUMN_SERVER_PHYSICAL = [
     {

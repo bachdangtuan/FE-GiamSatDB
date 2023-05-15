@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    <table id="advancd-table" class="table advanced-table table-nowrap mb-0" #advancedTable>
+        <thead>
+        <ng-container *ngTemplateOutlet="theHeaders"></ng-container>
+        </thead>
+        <tbody>
+        <ng-container *ngTemplateOutlet="theContent"></ng-container>
+        </tbody>
+    </table>
+
+    <div class="d-flex flex-wrap justify-content-center align-items-center justify-content-md-between mt-2"
+         *ngIf="pagination">
+        <div>
+            Hiển thị {{limit * (page - 1) }} tới
+            {{limit * (page - 1) + limit}} trong {{totalItems}}
+        </div>
+        <ngb-pagination [boundaryLinks]="true" class="pagination-rounded custom-pagination"
+                        [collectionSize]="totalItems"
+                        [maxSize]="4"
+                        [(page)]="page" [rotate]="true" [pageSize]="limit"
+                        (pageChange)="pageChange.emit($event)">
+        </ngb-pagination>
+    </div>
+
+</div>

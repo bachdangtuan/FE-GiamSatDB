@@ -52,4 +52,8 @@ export class DetailsComponent implements OnInit {
         this.showListContainer = true;
         this.idVirtualMachine = id
     }
+
+    showInfoVM(nameVirtualMachine: any) {
+        this.router.navigate(['/apps/projects/list'], {queryParams: {name: nameVirtualMachine}});
+    }
 }

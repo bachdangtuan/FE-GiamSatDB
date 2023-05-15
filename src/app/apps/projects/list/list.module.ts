@@ -4,18 +4,20 @@ import { NgbProgressbarModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstr
 import { UiModule } from 'src/app/shared/ui/ui.module';
 import { ListRoutingModule } from './list-routing.module';
 import { ListComponent } from './list.component';
+import {SharedModule} from "../../../shared/shared.module";
 
 
 @NgModule({
   declarations: [
     ListComponent
   ],
-  imports: [
-    CommonModule,
-    NgbTooltipModule,
-    NgbProgressbarModule,
-    UiModule,
-    ListRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        NgbTooltipModule,
+        NgbProgressbarModule,
+        UiModule,
+        ListRoutingModule,
+        SharedModule
+    ]
 })
 export class ListModule { }
