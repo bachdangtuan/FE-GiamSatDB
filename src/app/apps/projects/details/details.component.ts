@@ -54,6 +54,6 @@ export class DetailsComponent implements OnInit {
     }
 
     showInfoVM(nameVirtualMachine: any) {
-        this.router.navigate(['/apps/projects/list'], {queryParams: {name: nameVirtualMachine}});
+        this.router.navigate(['/apps/projects/list'], {queryParams: {nameVirtual: nameVirtualMachine}});
     }
 }

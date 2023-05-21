@@ -1,7 +1,11 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Injector, OnInit} from '@angular/core';
 import {Title} from '@angular/platform-browser';
 import {COLUMN_MONITOR} from "../../../core/constants/common";
 import {ActivatedRoute} from "@angular/router";
+import {SyncQueryParam} from "../../../core/decorators/syncParams.decorator";
+import {FormGroup} from "@angular/forms";
+import {VirtualmachineService} from "../../../core/service/virtualmachine.service";
+import {FormSearchVirtualMachineHelper} from "../../../core/helpers/formSearchVirtualMachine.helper";
 
 @Component({
     selector: 'app-project-list',
@@ -9,13 +13,24 @@ import {ActivatedRoute} from "@angular/router";
     styleUrls: ['./list.component.scss']
 })
 export class ListComponent implements OnInit {
+
+    @SyncQueryParam({
+        parseIgnore: ["status"],
+    })
+    public formSearchAndFilter: FormGroup;
     columns: any[] = [];
-
-
+    limit: any
+    pageCurrent: any
+    records: any[] = [];
+    totalItems: any;
     constructor(
+        public injector: Injector,
+        private formService: FormSearchVirtualMachineHelper,
         private titleService: Title,
         private route: ActivatedRoute,
+        public VirtualmachineService:VirtualmachineService
     ) {
+        this.formSearchAndFilter = formService.form;
         titleService.setTitle("List Thông tin | Hệ thống quản lý máy chủ dự án");
     }
 
@@ -25,13 +40,31 @@ export class ListComponent implements OnInit {
     }
 
     ngOnInit(): void {
+        this.route.queryParams.subscribe(params => {
+            console.log(params)
+            this.formSearchAndFilter.patchValue({
+                nameVirtual: params.nameVirtual,
+                page: 1,
+                limit: 6,
+            });
+        })
+
+
         this.initTableCofig()
-        this.getCompanyList()
+        this.getVirtualMachineList()
     }
 
-    getCompanyList() {
+    getVirtualMachineList() {
         const params$ = this.route.queryParams;
-        console.log('params$', params$)
+        params$.subscribe(param => {
+            this.VirtualmachineService.getInfoVirtualMachine(param).subscribe(res => {
+                console.log('data trả về',res)
+                // this.totalItems = res?.totalItems
+                // this.records = res.data
+                // this.limit = res.limit
+                // this.pageCurrent = res?.thisPage
+            })
+        })
     }
 
 }

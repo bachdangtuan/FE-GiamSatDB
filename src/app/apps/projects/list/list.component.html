@@ -46,4 +46,57 @@
         </tr>
     </ng-template>
 
+    <ng-template #theContent>
+        <tr *ngFor="let i of records">
+            <td>
+                <p class="m-0 fw-semibold"> {{i.hostName}}</p>
+                <small>Tên DB: {{ i.nameDatabase}}</small>
+            </td>
+            <td>
+                <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)'">
+                    <img width="85" src="./assets/images/centos.png" alt="centos">
+                </ng-template>
+            </td>
+            <td>
+                <span>{{i?.ipServer}}</span>
+            </td>
+            <td class="">
+                <span>{{i?.pathBackup}}</span>
+            </td>
+            <td>
+                <div [ngSwitch]="i?.status">
+                    <p class="badge badge-soft-info py-1"
+                       *ngSwitchCase="'backup'">{{'Success'}}</p>
+                    <p class="badge badge-soft-danger py-1" *ngSwitchCase="'error'">
+                        {{'Error'}}
+                    </p>
+                    <p class="badge badge-soft-info py-1"
+                       *ngSwitchDefault>{{'No content'}}</p>
+                </div>
+            </td>
+            <td>
+                <span>{{i?.capacityFile}}</span>
+            </td>
+            <!--                            <td>{{i.timestamp | date: 'HH:mm - dd/MM/yyyy'}}</td>-->
+            <td>
+                <span>{{i?.DateBackup}}</span>
+            </td>
+            <td>
+                <span>{{ '00:00:00'}}</span>
+            </td>
+            <td>
+                <span>{{i?.TimeBackup}}</span>
+            </td>
+            <td>
+                <div class="d-flex gap-1" style="cursor: pointer">
+                    <button class="btn">
+                        <i data-feather="trash" appFeatherIcon class="icon-dual"></i>
+                    </button>
+                </div>
+            </td>
+        </tr>
+    </ng-template>
+
+
+
 </app-advanced-table-device>
