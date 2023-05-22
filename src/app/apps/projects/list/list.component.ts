@@ -23,6 +23,8 @@ export class ListComponent implements OnInit {
     pageCurrent: any
     records: any[] = [];
     totalItems: any;
+    infoVitual: any
+
     constructor(
         public injector: Injector,
         private formService: FormSearchVirtualMachineHelper,
@@ -42,16 +44,22 @@ export class ListComponent implements OnInit {
     ngOnInit(): void {
         this.route.queryParams.subscribe(params => {
             console.log(params)
+            this.infoVitual = params?.nameVirtual
             this.formSearchAndFilter.patchValue({
                 nameVirtual: params.nameVirtual,
-                page: 1,
-                limit: 6,
             });
         })
 
 
         this.initTableCofig()
         this.getVirtualMachineList()
+    }
+
+    updatePage(data: number): void {
+        // console.log('data',data)
+        this.formService.form.patchValue({
+            page: data,
+        });
     }
 
     getVirtualMachineList() {

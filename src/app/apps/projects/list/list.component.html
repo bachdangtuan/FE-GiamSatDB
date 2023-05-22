@@ -10,20 +10,20 @@
                         </div>
                         <div class="col-xl-10 col-lg-9">
                             <div class="mt-4 mt-lg-0">
-                                <h5 class="mt-0 mb-1 fw-bold">Thông tin máy vật lý </h5>
+                                <h5 class="mt-0 mb-1 fs-22 fw-bold">Thông tin máy ảo </h5>
                                 <div class="row">
-                                    <div class="col-3">
-                                        RAM
+                                    <div class="col-3 fs-22">
+                                        {{infoVitual}}
                                     </div>
-                                    <div class="col-3">
-                                        RAM
-                                    </div>
-                                    <div class="col-3">
-                                        RAM
-                                    </div>
-                                    <div class="col-3">
-                                        RAM
-                                    </div>
+<!--                                    <div class="col-3">-->
+<!--                                        RAM-->
+<!--                                    </div>-->
+<!--                                    <div class="col-3">-->
+<!--                                        RAM-->
+<!--                                    </div>-->
+<!--                                    <div class="col-3">-->
+<!--                                        RAM-->
+<!--                                    </div>-->
                                 </div>
                             </div>
                         </div>
@@ -38,7 +38,17 @@
 </div>
 
 
-<app-advanced-table-device>
+<app-advanced-table-device
+
+        *ngIf="records.length >0; else noData"
+        [totalItems]="totalItems"
+        [page]="pageCurrent"
+        [limit]="limit"
+        [pagination]="true"
+        [hasRowSelection]="true"
+        (pageChange)="updatePage($event)"
+
+>
     <ng-template #theHeaders>
         <tr>
             <th *ngFor="let column of columns" [style.width.px]="column.width" class="text-capitalize">
@@ -63,9 +73,8 @@
             <td>
                 <span>{{i?.usedram}}</span>
             </td>
-            <!--                            <td>{{i.timestamp | date: 'HH:mm - dd/MM/yyyy'}}</td>-->
             <td>
-                <span>{{i?.usedram/i?.usedram * 100}} %</span>
+                <span>{{ (( i?.usedram.slice(0, -1)  / i?.ram.slice(0, -1) ) * 100).toFixed(2) }} %</span>
             </td>
             <td>
                 <span>{{i?.disk}}</span>
@@ -74,14 +83,19 @@
                 <span>{{i?.diskused}}</span>
             </td>
             <td>
-                <span>{{'50%'}}</span>
+                <span>{{(i?.diskused.slice(0, -1) /i?.disk.slice(0, -1)  * 100).toFixed(2) }}%</span>
             </td>
             <td>
-                <span>{{i?.createdAt | date:'dd/MM/yyyy HH:mm:ss'}}</span>
+                <span>{{i?.createdAt | date:'dd/MM/yyyy HH:mm'}}</span>
             </td>
         </tr>
     </ng-template>
 
-
-
 </app-advanced-table-device>
+<ng-template #noData>
+    <div class="text-center m-5">
+
+        <h3>Đang lấy dữ liệu thông tin dữ liệu monitor</h3>
+
+    </div>
+</ng-template>

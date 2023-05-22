@@ -82,17 +82,17 @@ export const COLUMN_MONITOR=[
     },
     {
         name: 'disk',
-        label: 'Khối lượng ổ cứng',
+        label: 'KL ổ cứng /',
         width: 150,
     },
     {
         name: 'diskused',
-        label: 'Khối lượng sử dụng',
+        label: 'KL sử dụng',
         width: 150,
     },
     {
         name: 'diskused',
-        label: '% disk sử dụng',
+        label: '% sử dụng DISK',
         width: 150,
     },
     {
