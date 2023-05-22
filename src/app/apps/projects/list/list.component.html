@@ -49,50 +49,35 @@
     <ng-template #theContent>
         <tr *ngFor="let i of records">
             <td>
-                <p class="m-0 fw-semibold"> {{i.hostName}}</p>
-                <small>Tên DB: {{ i.nameDatabase}}</small>
+                <p class="m-0 fw-semibold"> {{i.nameVirtualMachine}}</p>
             </td>
             <td>
-                <ng-template [ngIf]="i?.osSystems === 'CentOS Linux 7 (Core)'">
-                    <img width="85" src="./assets/images/centos.png" alt="centos">
-                </ng-template>
-            </td>
-            <td>
-                <span>{{i?.ipServer}}</span>
+                <span>{{i?.ipaddress}}/24</span>
             </td>
             <td class="">
-                <span>{{i?.pathBackup}}</span>
+                <span>{{i?.cpu}}%</span>
             </td>
             <td>
-                <div [ngSwitch]="i?.status">
-                    <p class="badge badge-soft-info py-1"
-                       *ngSwitchCase="'backup'">{{'Success'}}</p>
-                    <p class="badge badge-soft-danger py-1" *ngSwitchCase="'error'">
-                        {{'Error'}}
-                    </p>
-                    <p class="badge badge-soft-info py-1"
-                       *ngSwitchDefault>{{'No content'}}</p>
-                </div>
+                <span>{{i?.ram}}</span>
             </td>
             <td>
-                <span>{{i?.capacityFile}}</span>
+                <span>{{i?.usedram}}</span>
             </td>
             <!--                            <td>{{i.timestamp | date: 'HH:mm - dd/MM/yyyy'}}</td>-->
             <td>
-                <span>{{i?.DateBackup}}</span>
+                <span>{{i?.usedram/i?.usedram * 100}} %</span>
             </td>
             <td>
-                <span>{{ '00:00:00'}}</span>
+                <span>{{i?.disk}}</span>
             </td>
             <td>
-                <span>{{i?.TimeBackup}}</span>
+                <span>{{i?.diskused}}</span>
             </td>
             <td>
-                <div class="d-flex gap-1" style="cursor: pointer">
-                    <button class="btn">
-                        <i data-feather="trash" appFeatherIcon class="icon-dual"></i>
-                    </button>
-                </div>
+                <span>{{'50%'}}</span>
+            </td>
+            <td>
+                <span>{{i?.createdAt | date:'dd/MM/yyyy HH:mm:ss'}}</span>
             </td>
         </tr>
     </ng-template>

@@ -59,10 +59,10 @@ export class ListComponent implements OnInit {
         params$.subscribe(param => {
             this.VirtualmachineService.getInfoVirtualMachine(param).subscribe(res => {
                 console.log('data trả về',res)
-                // this.totalItems = res?.totalItems
-                // this.records = res.data
-                // this.limit = res.limit
-                // this.pageCurrent = res?.thisPage
+                this.totalItems = res?.listInfoDetailVM.count
+                this.records = res?.listInfoDetailVM.rows
+                this.limit = res.limit
+                this.pageCurrent = res?.thisPage
             })
         })
     }
