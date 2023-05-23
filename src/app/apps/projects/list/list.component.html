@@ -5,36 +5,42 @@
             <div class="card">
                 <div class="card-body">
                     <div class="row align-items-center">
-                        <div class="col-xl-2 col-lg-3 col-6">
-                            <img src="assets/images/cal.png" class="me-2 align-self-center img-fluid" alt="cal">
-                        </div>
-                        <div class="col-xl-10 col-lg-9">
+                        <div class="col-xl-12 col-lg-12">
                             <div class="mt-3 mt-lg-0">
-                                <h5 class="mt-0 mb-1 fs-22 fw-bold">Thông tin máy ảo </h5>
                                 <div class="row">
-                                    <div class="col-3 fs-22">
-                                        {{infoVitual}}
+                                    <div class="col-3 fs-22 d-flex justify-content-center align-items-center">
+                                        <h5 class="mt-0 mb-1 fs-22 fw-bold">Thông tin máy ảo
+
+                                            <p class="text-danger">{{infoVitual}}</p>
+                                        </h5>
+
                                     </div>
-<!--                                    <div class="col-3">-->
-<!--                                        RAM-->
-<!--                                    </div>-->
-<!--                                    <div class="col-3">-->
-<!--                                        RAM-->
-<!--                                    </div>-->
-<!--                                    <div class="col-3">-->
-<!--                                        RAM-->
-<!--                                    </div>-->
+                                    <div class="col-9">
+                                        <div class=" fs-22 bg-success">
+                                            Search
+                                        </div>
+                                        <div class="mt-2">
+                                            <h6>Nội dung: Check thông số CPU máy ảo 1 ngày 3 lần / ngày</h6>
+                                            <p class="mb-0">
+                                                thời gian: 9h sáng , 14h chiều , 19h tối các ngày trong tuần
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <div class="">
+                        <button class="btn btn-primary" style="margin-right: 20px">Quay lại</button>
+                        <button class="btn btn-primary">Xuất dữ liệu Excel</button>
+                    </div>
+
 
                 </div> <!-- end card body-->
             </div> <!-- end card -->
         </div>
         <!-- end col-12 -->
     </div>
-
 </div>
 
 
@@ -74,7 +80,7 @@
                 <span>{{i?.usedram}}</span>
             </td>
             <td>
-                <span>{{ (( i?.usedram.slice(0, -1)  / i?.ram.slice(0, -1) ) * 100).toFixed(2) }} %</span>
+                <span>{{ ((i?.usedram.slice(0, -1) / i?.ram.slice(0, -1)) * 100).toFixed(2) }} %</span>
             </td>
             <td>
                 <span>{{i?.disk}}</span>
@@ -83,7 +89,7 @@
                 <span>{{i?.diskused}}</span>
             </td>
             <td>
-                <span>{{(i?.diskused.slice(0, -1) /i?.disk.slice(0, -1)  * 100).toFixed(2) }}%</span>
+                <span>{{(i?.diskused.slice(0, -1) / i?.disk.slice(0, -1) * 100).toFixed(2) }}%</span>
             </td>
             <td>
                 <span>{{ i?.createdAt | date:' HH:mm dd/MM/yyyy':'+000' }}</span>

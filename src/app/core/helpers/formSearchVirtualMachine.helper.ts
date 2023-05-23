@@ -19,7 +19,7 @@ export class FormSearchVirtualMachineHelper {
     private static initForm(data?: SearchLogParams): FormGroup {
         return new FormGroup({
             page: new FormControl(data?.page || 1),
-            limit: new FormControl(data?.limit || 8),
+            limit: new FormControl(data?.limit || 10),
             nameVirtual: new FormControl(data?.nameVirtual ),
         });
     }
