@@ -6,10 +6,10 @@
                 <div class="card-body">
                     <div class="row align-items-center">
                         <div class="col-xl-2 col-lg-3 col-6">
-                            <img src="assets/images/cal.png" class="me-4 align-self-center img-fluid" alt="cal">
+                            <img src="assets/images/cal.png" class="me-2 align-self-center img-fluid" alt="cal">
                         </div>
                         <div class="col-xl-10 col-lg-9">
-                            <div class="mt-4 mt-lg-0">
+                            <div class="mt-3 mt-lg-0">
                                 <h5 class="mt-0 mb-1 fs-22 fw-bold">Thông tin máy ảo </h5>
                                 <div class="row">
                                     <div class="col-3 fs-22">
@@ -86,7 +86,7 @@
                 <span>{{(i?.diskused.slice(0, -1) /i?.disk.slice(0, -1)  * 100).toFixed(2) }}%</span>
             </td>
             <td>
-                <span>{{i?.createdAt | date:'dd/MM/yyyy HH:mm'}}</span>
+                <span>{{ i?.createdAt | date:' HH:mm dd/MM/yyyy':'+000' }}</span>
             </td>
         </tr>
     </ng-template>

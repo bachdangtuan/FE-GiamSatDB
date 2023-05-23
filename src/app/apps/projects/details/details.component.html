@@ -61,7 +61,7 @@
                     <h3 class="card-title  p-2 mb-0">Danh sách máy ảo</h3>
                     <div class="row mt-1">
                         <div *ngFor="let i of listVirtualMachine"
-                             class="col-xl-2 col-lg-2">
+                             class="col-xl-3 col-lg-2">
                             <div class="card border customize-detail-component" style="cursor: pointer">
                                 <div class="card-body">
                                     <div class="badge bg-success float-end">Đang hoạt động</div>
@@ -71,11 +71,14 @@
                                         Địa chỉ IP: {{i?.ipaddress}}
                                     </h6>
                                     <div class="d-flex gap-1">
-                                        <button class="btn btn-primary" (click)="showInfoVM(i?.nameVirtualMachine)">
+                                        <button class="btn btn-primary btn-soft-primary" (click)="showInfoVM(i?.nameVirtualMachine)">
                                             Monitor
                                         </button>
                                         <button (click)="showDetailVM(i?.id)" class="btn text-info btn-soft-info">
                                             List container
+                                        </button>
+                                        <button (click)="showDetailVM(i?.id)" class="btn text-warning btn-soft-warning">
+                                            Check Disk
                                         </button>
                                     </div>
                                 </div>

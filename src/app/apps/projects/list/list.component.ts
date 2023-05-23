@@ -49,8 +49,6 @@ export class ListComponent implements OnInit {
                 nameVirtual: params.nameVirtual,
             });
         })
-
-
         this.initTableCofig()
         this.getVirtualMachineList()
     }
