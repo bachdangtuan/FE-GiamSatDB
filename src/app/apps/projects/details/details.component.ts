@@ -27,6 +27,7 @@ export class DetailsComponent implements OnInit {
     detailPhysicalMachine: any;
     listVirtualMachine: any;
     showListContainer: any;
+    showListDisk: any;
     idVirtualMachine: any;
 
     ngOnInit(): void {
@@ -50,10 +51,16 @@ export class DetailsComponent implements OnInit {
 
     showDetailVM(id: any) {
         this.showListContainer = true;
+        this.showListDisk = false;
         this.idVirtualMachine = id
     }
 
     showInfoVM(nameVirtualMachine: any) {
         this.router.navigate(['/apps/projects/list'], {queryParams: {nameVirtual: nameVirtualMachine}});
+    }
+
+    showDiskVM(id: any) {
+        this.showListDisk = true
+        this.showListContainer = false;
     }
 }
