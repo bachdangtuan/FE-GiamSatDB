@@ -31,7 +31,9 @@
                         </div>
                     </div>
                     <div class="">
-                        <button class="btn btn-primary" style="margin-right: 20px">Quay lại</button>
+                        <button class="btn btn-primary" style="margin-right: 20px
+">Quay lại
+                        </button>
                         <button class="btn btn-primary">Xuất dữ liệu Excel</button>
                     </div>
 
@@ -80,7 +82,12 @@
                 <span>{{i?.usedram}}</span>
             </td>
             <td>
-                <span>{{ ((i?.usedram.slice(0, -1) / i?.ram.slice(0, -1)) * 100).toFixed(2) }} %</span>
+                <span *ngIf="i?.usedram.slice(-2) === 'Gi' ;else noGi">
+                   {{ ((i?.usedram.slice(0, -2) / i?.ram.slice(0, -2)) * 100).toFixed(2) }} %
+                </span>
+                <ng-template #noGi>
+                    <span>{{ ((i?.usedram.slice(0, -1) / i?.ram.slice(0, -1)) * 100).toFixed(2) }} %</span>
+                </ng-template>
             </td>
             <td>
                 <span>{{i?.disk}}</span>
