@@ -6,6 +6,7 @@ import {SyncQueryParam} from "../../../core/decorators/syncParams.decorator";
 import {FormGroup} from "@angular/forms";
 import {VirtualmachineService} from "../../../core/service/virtualmachine.service";
 import {FormSearchVirtualMachineHelper} from "../../../core/helpers/formSearchVirtualMachine.helper";
+import {ExcelService} from "../../../core/service/excel.service";
 
 @Component({
     selector: 'app-project-list',
@@ -30,7 +31,8 @@ export class ListComponent implements OnInit {
         private formService: FormSearchVirtualMachineHelper,
         private titleService: Title,
         private route: ActivatedRoute,
-        public VirtualmachineService:VirtualmachineService
+        private excelService: ExcelService,
+        public VirtualmachineService: VirtualmachineService
     ) {
         this.formSearchAndFilter = formService.form;
         titleService.setTitle("List Thông tin | Hệ thống quản lý máy chủ dự án");
@@ -64,7 +66,7 @@ export class ListComponent implements OnInit {
         const params$ = this.route.queryParams;
         params$.subscribe(param => {
             this.VirtualmachineService.getInfoVirtualMachine(param).subscribe(res => {
-                console.log('data trả về',res)
+                console.log('data trả về', res)
                 this.totalItems = res?.listInfoDetailVM.count
                 this.records = res?.listInfoDetailVM.rows
                 this.limit = res.limit
@@ -72,5 +74,11 @@ export class ListComponent implements OnInit {
             })
         })
     }
+
+    exportData(): void {
+        console.log('this.records', this.records)
+        this.excelService.exportToExcel(this.records, 'Tổng hợp dữ liệu');
+    }
+
 
 }
