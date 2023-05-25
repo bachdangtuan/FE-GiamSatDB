@@ -18,7 +18,7 @@ export class ExcelService {
     data.unshift(defaultRow);
 
     const worksheet: XLSX.WorkSheet = XLSX.utils.json_to_sheet(data);
-    const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['data'] };
+    const workbook: XLSX.WorkBook = { Sheets: { 'data': worksheet }, SheetNames: ['Dữ liệu check'] };
     const excelBuffer: any = XLSX.write(workbook, { bookType: 'xlsx', type: 'array' });
     this.saveAsExcelFile(excelBuffer, filename);
   }
