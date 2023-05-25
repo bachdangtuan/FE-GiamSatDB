@@ -85,10 +85,10 @@ export class ListComponent implements OnInit {
             "tên máy chủ": item.nameVirtualMachine,
             "địa chỉ IP": item.ipaddress,
             "cpu": item.cpu,
-            "ram": item.ram,
-            "usedram": item.usedram,
-            "disk": item.disk,
-            "diskused": item.diskused,
+            "Tổng Ram": item.ram,
+            "Ram Sử Dụng": item.usedram,
+            "Ổ Đĩa /root": item.disk,
+            "KL sử dụng Disk": item.diskused,
             "ngày check": moment.utc(item.createdAt).utcOffset(0).format("DD/MM/YYYY HH:mm")
         }));
         console.log('newData', newData)
