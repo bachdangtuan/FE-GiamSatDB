@@ -7,6 +7,7 @@ import {FormGroup} from "@angular/forms";
 import {VirtualmachineService} from "../../../core/service/virtualmachine.service";
 import {FormSearchVirtualMachineHelper} from "../../../core/helpers/formSearchVirtualMachine.helper";
 import {ExcelService} from "../../../core/service/excel.service";
+import moment from "moment";
 
 @Component({
     selector: 'app-project-list',
@@ -77,7 +78,21 @@ export class ListComponent implements OnInit {
 
     exportData(): void {
         console.log('this.records', this.records)
-        this.excelService.exportToExcel(this.records, 'Tổng hợp dữ liệu');
+        // const newData = this.records.map(({ id, belongtoPhysicalMachine, ...rest }) => rest);
+        // console.log(newData);
+
+        const newData = this.records.map(item => ({
+            "tên máy chủ": item.nameVirtualMachine,
+            "địa chỉ IP": item.ipaddress,
+            "cpu": item.cpu,
+            "ram": item.ram,
+            "usedram": item.usedram,
+            "disk": item.disk,
+            "diskused": item.diskused,
+            "ngày check": moment.utc(item.createdAt).utcOffset(0).format("DD/MM/YYYY HH:mm")
+        }));
+        console.log('newData', newData)
+        this.excelService.exportToExcel(newData, 'Tổng hợp dữ liệu');
     }
 
 
