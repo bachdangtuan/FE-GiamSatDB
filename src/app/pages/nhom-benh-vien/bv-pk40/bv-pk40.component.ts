@@ -38,7 +38,7 @@ export class BvPk40Component implements OnInit {
     }
 
     ngOnInit(): void {
-        this.pageTitle = [{label: 'Log Backup Jira', path: '/', active: true}];
+        this.pageTitle = [{label: 'Log Backup Phòng khám 4.0', path: '/', active: true}];
         this.formSearchAndFilter.patchValue({
             hostName: 'patroni1',
             nameDatabase: 'sakura_pk40',

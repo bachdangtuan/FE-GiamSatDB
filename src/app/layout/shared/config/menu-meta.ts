@@ -313,7 +313,7 @@ const MENU_ITEMS: MenuItem[] = [
     },
     {
         key: 'bv-dkth',
-        label: 'DK36  ',
+        label: 'ĐK Thanh Hóa',
         isTitle: false,
         icon: 'globe',
         collapsed: true,

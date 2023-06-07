@@ -78,13 +78,10 @@ export class ListComponent implements OnInit {
 
     exportData(): void {
         console.log('this.records', this.records)
-        // const newData = this.records.map(({ id, belongtoPhysicalMachine, ...rest }) => rest);
-        // console.log(newData);
-
         const newData = this.records.map(item => ({
-            "tên máy chủ": item.nameVirtualMachine,
-            "địa chỉ IP": item.ipaddress,
-            "cpu": item.cpu,
+            "Tên máy chủ": item.nameVirtualMachine,
+            "Địa chỉ IP": item.ipaddress,
+            "CPU(theo %)": item.cpu,
             "Tổng Ram": item.ram,
             "Ram Sử Dụng": item.usedram,
             "Ổ Đĩa /root": item.disk,
