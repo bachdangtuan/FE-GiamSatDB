@@ -50,9 +50,9 @@ export class DetailsComponent implements OnInit {
     }
 
     showDetailVM(id: any) {
-        this.showListContainer = true;
-        this.showListDisk = false;
         this.idVirtualMachine = id
+        this.router.navigate(['/apps/projects/docker'], {queryParams: {container: id}});
+        console.log(id)
     }
 
     showInfoVM(nameVirtualMachine: any) {
@@ -60,7 +60,8 @@ export class DetailsComponent implements OnInit {
     }
 
     showDiskVM(id: any) {
-        this.showListDisk = true
-        this.showListContainer = false;
+        this.idVirtualMachine = id
+        this.router.navigate(['/apps/projects/disk'], {queryParams: {container: id}});
+        console.log(id)
     }
 }
