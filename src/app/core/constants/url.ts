@@ -7,7 +7,7 @@ export const API_URL = {
     LIST_PROJECT: `${LINK}/api/projects/detail`,
     LIST_PHYSICAL_MACHINE: `${LINK}/api/physicalmachine/detail`,
     LIST_VIRTUAL_MACHINE: `${LINK}/api/virtualmachine/getnameVM`,
-
+    LIST_CONTAINER: `${LINK}/api/servicecontainer/list`,
 
 }
 

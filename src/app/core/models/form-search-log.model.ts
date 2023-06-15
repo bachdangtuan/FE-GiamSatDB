@@ -5,6 +5,7 @@ export class SearchLogParams {
     hostName?: string;
     nameDatabase?: string
     nameVirtual?:string
+    container?:string
     constructor(props: {
         status: any;
         page?: number;
@@ -12,6 +13,7 @@ export class SearchLogParams {
         hostName?: string;
         nameDatabase: string;
         nameVirtual:string;
+        container:string;
     }) {
         this.page = props?.page;
         this.limit = props?.limit;
@@ -19,5 +21,6 @@ export class SearchLogParams {
         this.hostName = props?.hostName;
         this.nameDatabase = props.nameDatabase;
         this.nameVirtual= props.nameVirtual;
+        this.container= props.container;
     }
 }

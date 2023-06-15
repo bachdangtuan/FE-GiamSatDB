@@ -102,6 +102,34 @@ export const COLUMN_MONITOR=[
     },
 ]
 
+export const COLUMN_MONITOR_CONTAINER=[
+    {
+        name: 'name',
+        label: 'CONTAINER SERVICE',
+        width: 250,
+    },
+    {
+        name: 'ipaddress',
+        label: 'ĐỊA CHỈ IP',
+        width: 150,
+    },
+    {
+        name: 'cpu',
+        label: '% CPU SỬ DỤNG',
+        width: 150,
+    },
+    {
+        name: 'ram',
+        label: '% RAM SỬ DỤNG',
+        width: 150,
+    },
+    {
+        name: 'date',
+        label: 'Ngày check',
+        width: 150,
+    },
+]
+
 
 export const COLUMN_SERVER_PHYSICAL = [
     {

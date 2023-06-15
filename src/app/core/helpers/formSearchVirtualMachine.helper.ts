@@ -21,6 +21,7 @@ export class FormSearchVirtualMachineHelper {
             page: new FormControl(data?.page || 1),
             limit: new FormControl(data?.limit || 10),
             nameVirtual: new FormControl(data?.nameVirtual ),
+            container:new FormControl(data?.container )
         });
     }
 }
