@@ -4,14 +4,15 @@ import { NgbProgressbarModule, NgbTooltipModule } from '@ng-bootstrap/ng-bootstr
 import { UiModule } from 'src/app/shared/ui/ui.module';
 
 import {SharedModule} from "../../../shared/shared.module";
-import {DockerComponent} from "./docker.component";
+
 import {DockerRoutingModule} from "./docker-routing.module";
+import {DockerComponent} from "./docker.component";
 
 
 
 @NgModule({
   declarations: [
-      DockerComponent
+    DockerComponent
   ],
     imports: [
         CommonModule,
