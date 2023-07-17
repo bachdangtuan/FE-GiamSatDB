@@ -47,7 +47,6 @@ export class DockerComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(params => {
-      console.log(params)
       this.infoVitual = params?.container
       this.formSearchAndFilter.patchValue({
         container: params.container,

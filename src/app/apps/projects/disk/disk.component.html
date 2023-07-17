@@ -31,7 +31,7 @@
                         <button class="btn btn-primary" style="margin-right: 20px
 ">Quay lại
                         </button>
-                        <button class="btn btn-primary" (click)="exportData()">Xuất dữ liệu Excel</button>
+<!--                        <button class="btn btn-primary" (click)="exportData()">Xuất dữ liệu Excel</button>-->
                     </div>
 
 
@@ -62,22 +62,22 @@
     <ng-template #theContent>
         <tr *ngFor="let i of records">
             <td>
-                <p class="m-0 fw-semibold"> {{i?.nameServiceContainer}}</p>
+                <p class="m-0 fw-semibold"> {{i?.file_system}}</p>
             </td>
             <td>
-                <span>{{i?.ipaddress}}</span>
+                <span>{{i?.size}}</span>
             </td>
             <td class="">
-                <span>{{i?.cpu}}%</span>
+                <span>{{i?.used}}</span>
             </td>
             <td>
-                <span>{{i?.ram}}%</span>
+                <span>{{i?.available}}</span>
             </td>
             <td>
-                <span>{{ i?.createdAt | date:' HH:mm dd/MM/yyyy':'+000' }}</span>
+                <span>{{ i?.use_percentage }}</span>
             </td>
             <td>
-                <span>{{ i?.createdAt | date:' HH:mm dd/MM/yyyy':'+000' }}</span>
+                <span>{{ i?.created_at }}</span>
             </td>
         </tr>
     </ng-template>

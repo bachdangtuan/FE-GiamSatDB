@@ -61,7 +61,7 @@ export class DetailsComponent implements OnInit {
 
     showDiskVM(id: any) {
         this.idVirtualMachine = id
-        this.router.navigate(['/apps/projects/disk'], {queryParams: {container: id}});
+        this.router.navigate(['/apps/projects/disk'], {queryParams: {virtual_id: id}});
         console.log(id)
     }
 }

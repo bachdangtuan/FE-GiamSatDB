@@ -5,11 +5,11 @@ import {SearchLogParams} from "../models/form-search-log.model";
 @Injectable({
     providedIn: "root",
 })
-export class FormSearchVirtualMachineHelper {
+export class FormSearchDiskHelper {
     readonly #form: FormGroup;
 
     constructor() {
-        this.#form = FormSearchVirtualMachineHelper.initForm();
+        this.#form = FormSearchDiskHelper.initForm();
     }
 
     get form() {
@@ -20,8 +20,7 @@ export class FormSearchVirtualMachineHelper {
         return new FormGroup({
             page: new FormControl(data?.page || 1),
             limit: new FormControl(data?.limit || 10),
-            nameVirtual: new FormControl(data?.nameVirtual ),
-            container:new FormControl(data?.container ),
+            virtual_id: new FormControl(data?.virtual_id),
         });
     }
 }
