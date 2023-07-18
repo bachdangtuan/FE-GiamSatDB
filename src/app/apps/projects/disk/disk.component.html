@@ -1,1 +1,91 @@
-<p>dissk works!</p>
+<h3>List thông số phân vùng ổ cứng của máy chủ </h3>
+<div>
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-xl-12 col-lg-12">
+                            <div class="mt-3 mt-lg-0">
+                                <div class="row">
+                                    <div class="col-3 fs-22 d-flex justify-content-center align-items-center">
+                                        <h5 class="mt-0 mb-1 fs-22 fw-bold">Thông Tin Ổ Cứng Máy
+
+                                            <p class="text-danger">{{infoVitual}}</p>
+                                        </h5>
+
+                                    </div>
+                                    <div class="col-9">
+                                        <div class=" fs-22 bg-success">
+                                            Search
+                                        </div>
+                                        <div class="mt-2">
+                                            <h6>Nội dung: Check Thông tin ổ cứng</h6>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="">
+                        <button class="btn btn-primary" style="margin-right: 20px
+">Quay lại
+                        </button>
+<!--                        <button class="btn btn-primary" (click)="exportData()">Xuất dữ liệu Excel</button>-->
+                    </div>
+
+
+                </div> <!-- end card body-->
+            </div> <!-- end card -->
+        </div>
+        <!-- end col-12 -->
+    </div>
+</div>
+
+
+<app-advanced-table-device
+        *ngIf="records.length != 0; else noData"
+        [totalItems]="totalItems"
+        [page]="pageCurrent"
+        [limit]="limit"
+        [pagination]="true"
+        [hasRowSelection]="true"
+        (pageChange)="updatePage($event)"
+>
+    <ng-template #theHeaders>
+        <tr>
+            <th *ngFor="let column of columns" [style.width.px]="column.width" class="text-capitalize">
+                {{column.label}}</th>
+        </tr>
+    </ng-template>
+
+    <ng-template #theContent>
+        <tr *ngFor="let i of records">
+            <td>
+                <p class="m-0 fw-semibold"> {{i?.file_system}}</p>
+            </td>
+            <td>
+                <span>{{i?.size}}</span>
+            </td>
+            <td class="">
+                <span>{{i?.used}}</span>
+            </td>
+            <td>
+                <span>{{i?.available}}</span>
+            </td>
+            <td>
+                <span>{{ i?.use_percentage }}</span>
+            </td>
+            <td>
+                <span>{{ i?.created_at }}</span>
+            </td>
+        </tr>
+    </ng-template>
+
+</app-advanced-table-device>
+
+<ng-template #noData>
+    <div class="text-center m-5">
+        <h3>Không có thông tin disk trong server này</h3>
+    </div>
+</ng-template>

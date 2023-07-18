@@ -131,6 +131,40 @@ export const COLUMN_MONITOR_CONTAINER=[
 ]
 
 
+export const COLUMN_MONITOR_PARTITION_DISK=[
+    {
+        name: 'name',
+        label: 'FILE SYSTEMS',
+        width: 250,
+    },
+    {
+        name: 'size',
+        label: 'TỔNG KL',
+        width: 150,
+    },
+    {
+        name: 'used',
+        label: 'SỬ DỤNG',
+        width: 150,
+    },
+    {
+        name: 'available',
+        label: 'AVAILABLE',
+        width: 150,
+    },
+    {
+        name: 'used-percent',
+        label: 'USED_PERCENT',
+        width: 150,
+    },
+    {
+        name: 'date',
+        label: 'NGÀY CHECK',
+        width: 150,
+    },
+]
+
+
 export const COLUMN_SERVER_PHYSICAL = [
     {
         name: 'type',
