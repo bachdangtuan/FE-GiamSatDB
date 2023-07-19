@@ -9,7 +9,7 @@ import {ProjectService} from "../../../../core/service/project.service";
 export class BvDtInfoComponent implements OnInit {
     serverPhysical: any
     user: any
-    projectID = 10;
+    projectID = 21;
     isDataLoaded: boolean = false;
 
     constructor(

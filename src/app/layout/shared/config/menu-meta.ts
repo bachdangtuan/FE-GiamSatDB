@@ -380,27 +380,27 @@ const MENU_ITEMS: MenuItem[] = [
             },
         ],
     },
-    // {
-    //     key: 'bv-dt',
-    //     label: 'Đồng Tâm (bỏ)',
-    //     isTitle: false,
-    //     icon: 'globe',
-    //     collapsed: true,
-    //     children: [
-    //         {
-    //             key: 'bv-dt-info',
-    //             label: 'Thông tin server Đồng Tâm',
-    //             link: 'benh-vien/bv-dt/info',
-    //             parentKey: 'bv-dt',
-    //         },
-    //         {
-    //             key: 'bv-dt-database',
-    //             label: 'Database BVĐT',
-    //             link: 'benh-vien/bv-dt',
-    //             parentKey: 'bv-dt',
-    //         },
-    //     ],
-    // },
+    {
+        key: 'bv-dt',
+        label: 'PK Y Khoa HN',
+        isTitle: false,
+        icon: 'globe',
+        collapsed: true,
+        children: [
+            {
+                key: 'bv-dt-info',
+                label: 'Thông tin server YKHN',
+                link: 'benh-vien/bv-dt/info',
+                parentKey: 'bv-dt',
+            },
+            // {
+            //     key: 'bv-dt-database',
+            //     label: 'Database YKHN',
+            //     link: 'benh-vien/bv-dt',
+            //     parentKey: 'bv-dt',
+            // },
+        ],
+    },
     {
         key: 'bv-ytcc',
         label: 'PK YTCC ',
