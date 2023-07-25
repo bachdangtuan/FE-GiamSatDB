@@ -10,8 +10,8 @@ import {HttpHeaders} from '@angular/common/http';
 
 
 export class DiskpartitionService {
-    private username = 'system.admin@isofh.com'; // Replace with your API username
-    private password = 'abcd@1234';
+    private username = 'bachdangtuan.dev@gmail.com'; // Replace with your API username
+    private password = 'Tuan!Bach@Dang#93&deV';
 
     constructor(public http: HttpClient) {
 
